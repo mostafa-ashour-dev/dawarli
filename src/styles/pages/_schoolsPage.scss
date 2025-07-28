@@ -1,0 +1,26 @@
+@use "../vars/forwarder" as *;
+
+.mainWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    min-height: calc( 100vh - $nav-height);
+    margin-top: $nav-height;
+
+    .schoolsSection {
+        min-height: 100%;
+        width: 100%;
+        padding: 2rem 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .gridContainer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        min-height: 100%;
+        gap: 2rem;
+    }
+
+}

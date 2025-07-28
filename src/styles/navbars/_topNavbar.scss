@@ -1,0 +1,55 @@
+@use "../vars/forwarder" as *;
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 3rem;
+  background-color: $surface-color;
+  z-index: 1000;
+  max-height: $nav-height;
+  min-height: $nav-height;
+  border-bottom: 1px solid #e0e0e0;
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    .logo {
+      text-decoration: none;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $primary-text;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+
+      .navLink {
+        font-size: 0.9rem;
+        color: $muted-text;
+        transition: $st-transition;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .navRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

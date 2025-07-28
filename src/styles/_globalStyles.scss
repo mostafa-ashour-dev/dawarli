@@ -1,0 +1,24 @@
+@use "./vars/forwarder" as *;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: $poppins;
+    background-color: $body-bg;
+    color: $primary-text;
+
+    font-size: 20px;
+}
+
+[lang="ar"] body {
+    font-family: $noto;
+}
+

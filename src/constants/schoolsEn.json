@@ -1,0 +1,889 @@
+[
+  {
+    "title": "Al-Ridwan Islamic Private School",
+    "link": "https://egyptschools.info/school/al-ridwan-islamic-private-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2025/07/65962940255c995990395e13800460de-1-768x384.jpg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "",
+    "rating": null,
+    "location": null
+  },
+  {
+    "title": "Cairo West International School",
+    "link": "https://egyptschools.info/school/cairo-west-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2025/05/unnamed.webp",
+    "educationType": "American Diploma, British IGCSE, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 91,080 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "176 Sameh Gadou Street, First District, 6th of October City",
+        "lat": "29.98708",
+        "lng": "31.21181"
+      }
+    ]
+  },
+  {
+    "title": "Italian High School for Science and Technology - IHSS",
+    "link": "https://egyptschools.info/school/italian-high-school-science-technology-ihss/",
+    "image": "https://egyptschools.info/wp-content/uploads/2024/11/Logo-MIUR-768x294.png",
+    "educationType": "Italian Diploma (IDM), Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 148,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "S10+S11, Sway, Mohammed Nagib Axis, New Cairo, Egypt",
+        "lat": "30.01783",
+        "lng": "31.47500"
+      }
+    ]
+  },
+  {
+    "title": "Emerald International School - EIS",
+    "link": "https://egyptschools.info/school/emerald-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2024/10/KPH08931-scaled-1-768x512.webp",
+    "educationType": "American Diploma, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 101,200 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Giza, Egypt",
+        "lat": "29.97575",
+        "lng": "31.01495"
+      }
+    ]
+  },
+  {
+    "title": "Arkan Future College",
+    "link": "https://egyptschools.info/school/arkan-future-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2024/10/اركااااان-768x432.jpg",
+    "fees": "Starting fees: 52,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Northern Touristic Area, Near Hunting Club, 6th of October City, Giza",
+        "lat": "30.94534",
+        "lng": "29.99830"
+      }
+    ]
+  },
+  {
+    "title": "Insight Language School",
+    "link": "https://egyptschools.info/school/insight-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2024/10/3333-768x237.jpg",
+    "fees": "Starting fees: 26,400 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "First District, 6th of October City, Giza",
+        "lat": "29.88716",
+        "lng": "31.06825"
+      }
+    ]
+  },
+  {
+    "title": "International Public School Rawdat El Obour - IPS",
+    "link": "https://egyptschools.info/school/international-public-school-rawdat-elobour/",
+    "image": "https://egyptschools.info/wp-content/uploads/2024/01/410176531_122095663142156688_5112817842385158740_n-768x576.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 19,500 EGP",
+    "rating": null,
+    "location": null
+  },
+  {
+    "title": "Westcliff International School",
+    "link": "https://egyptschools.info/school/westcliff-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/12/PHOTO-2023-03-12-20-16-51_edited-768x432.png",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 57,867 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Saqqara Road, Mariouteya, Giza",
+        "lat": "29.94765",
+        "lng": "31.18456"
+      }
+    ]
+  },
+  {
+    "title": "King's School The Crown",
+    "link": "https://egyptschools.info/school/kings-school-the-crown/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/outdoor_kings_egypt.jpg-768x512.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 253,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Inside Palm Hills Compound, 6th of October City, Giza",
+        "lat": "29.98246",
+        "lng": "31.04130"
+      }
+    ]
+  },
+  {
+    "title": "Green Hills College",
+    "link": "https://egyptschools.info/school/green-hills-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/2023-03-01-768x576.jpeg",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 63,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Building 102, Yasser Rizk Axis, Mokattam, Cairo",
+        "lat": "30.00422",
+        "lng": "31.29263"
+      }
+    ]
+  },
+  {
+    "title": "Talae Al Amal Language School",
+    "link": "https://egyptschools.info/school/talae-al-amal-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/05/2021-12-15.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 18,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "New Heliopolis, El Shorouk City, Cairo",
+        "lat": "30.12488",
+        "lng": "31.69519"
+      }
+    ]
+  },
+  {
+    "title": "Belvedere School Cairo",
+    "link": "https://egyptschools.info/school/belvedere-school-cairo/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/Screen-Shot-2023-11-20-at-1.49.24-PM-768x317.png",
+    "educationType": "British IGCSE, International Baccalaureate (IB)",
+    "fees": "Starting fees: 143,333 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Cairo-Suez Road, New Cairo, Cairo",
+        "lat": "30.11884",
+        "lng": "31.69598"
+      }
+    ]
+  },
+  {
+    "title": "Seeds British School - SBS",
+    "link": "https://egyptschools.info/school/seeds-british-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/380422262_1796411520809324_5386613211562886342_n-768x306.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 55,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "R2, New Administrative Capital, Cairo",
+        "lat": "30.03261",
+        "lng": "31.66864"
+      }
+    ]
+  },
+  {
+    "title": "Golden Modern School - GMS",
+    "link": "https://egyptschools.info/school/golden-modern-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/366283770_249291844703520_8038420257859786708_n-768x512.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 36,600 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Gate 3, El Shorouk City, Cairo",
+        "lat": "51.51478",
+        "lng": "-0.14456"
+      }
+    ]
+  },
+  {
+    "title": "Egypt Integrated Language School - EILS Zahraa Nasr City",
+    "link": "https://egyptschools.info/school/egypt-integrated-language-school-zahraa-nasr-city/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/394496467_708874504630458_2321605446027113904_n-768x406.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 11,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Officers' Housing, Zahraa Nasr City, Nasr City, Cairo",
+        "lat": "30.04382",
+        "lng": "31.39717"
+      }
+    ]
+  },
+
+  {
+    "title": "Egypt Integrated Language School - EILS El Zaitoun",
+    "link": "https://egyptschools.info/school/egypt-integrated-language-school-elzaitoun/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/398696463_122117867078056842_6721324169000639235_n-768x576.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 11,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "230 Teraa El Gabal Street, Zaitoun Gardens, Cairo",
+        "lat": "30.10239",
+        "lng": "31.30566"
+      }
+    ]
+  },
+  {
+    "title": "Citadel International School",
+    "link": "https://egyptschools.info/school/citadel-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/11/260725907_106383995213663_8847330804736039020_n-2-768x768.png",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 52,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Zahraa El Maadi, Investment Zone, Behind National Gas Station, Cairo",
+        "lat": "29.97467",
+        "lng": "31.35874"
+      }
+    ]
+  },
+  {
+    "title": "Futures Tech October",
+    "link": "https://egyptschools.info/school/futures-tech-october/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/10/354065544_185056851195688_59557228637379836_n-768x288.jpg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 44,999 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Inside Cosmic Village, 6th of October City, Giza",
+        "lat": "29.92675",
+        "lng": "31.07177"
+      }
+    ]
+  },
+  {
+    "title": "Baron Language School",
+    "link": "https://egyptschools.info/school/baron-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/10/DSC_0151-Copy-1.jpg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 29,775 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "First District, Mokattam, Cairo",
+        "lat": "30.00649",
+        "lng": "31.28558"
+      }
+    ]
+  },
+  {
+    "title": "Manhattan Elite International School",
+    "link": "https://egyptschools.info/school/manhattan-elite-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/10/332104689_567216822003569_849733596616474200_n-768x512.jpeg",
+    "educationType": "American Diploma",
+    "fees": "Starting fees: 55,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Behind Ring Road Carrefour, Zahraa El Maadi, Maadi, Cairo",
+        "lat": "29.97602",
+        "lng": "31.33011"
+      }
+    ]
+  },
+  {
+    "title": "Moon Gardens International School",
+    "link": "https://egyptschools.info/school/moon-gardens-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/10/363762441_627437156146681_1762225105345827119_n-768x548.jpeg",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 36,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Moon Gardens Compound, Entrance 2, Cairo-Ismailia Road, Cairo",
+        "lat": "30.16406",
+        "lng": "31.44556"
+      }
+    ]
+  },
+  {
+    "title": "Cadmus International School - Alburouj",
+    "link": "https://egyptschools.info/school/cadmus-international-school-alburouj/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/10/BRJ-2-768x424.jpeg",
+    "educationType": "SABIS Diploma",
+    "fees": "Starting fees: 102,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Alburouj Compound, Plot 106, Cairo-Ismailia Road, El Shorouk City, Cairo",
+        "lat": "30.21382",
+        "lng": "31.73782"
+      }
+    ]
+  },
+  {
+    "title": "The American School of Egypt - ASE",
+    "link": "https://egyptschools.info/school/the-american-school-of-egypt/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/09/332085459_1009326410472970_2755593998335100882_n-768x464.jpeg",
+    "educationType": "American Diploma",
+    "fees": "Starting fees: 120,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Zone 9 Service Center, Dahshur Road, Sheikh Zayed City, Giza",
+        "lat": "30.03982",
+        "lng": "30.95884"
+      }
+    ]
+  },
+  {
+    "title": "Palm International School",
+    "link": "https://egyptschools.info/school/palm-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/05/324875270_967233657593100_1081559877979331907_n-768x432.jpeg",
+    "educationType": "American Diploma",
+    "fees": "Starting fees: 60,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Palm City, Ring Road, Cairo",
+        "lat": "29.98071",
+        "lng": "31.35314"
+      }
+    ]
+  },
+  {
+    "title": "Nordic School In Cairo",
+    "link": "https://egyptschools.info/school/nordic-school-in-cairo/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/04/ef24f9eb-94c4-49d8-a1ab-2a4a16920840-e1681678626272-768x416.jpg",
+    "educationType": "International Baccalaureate (IB)",
+    "fees": "Starting fees: 84,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Dahshur Link Road, Opposite Strip Mall, Sheikh Zayed City, Giza",
+        "lat": "30.06417",
+        "lng": "30.93317"
+      }
+    ]
+  },
+  {
+    "title": "Nasr Language Schools",
+    "link": "https://egyptschools.info/school/nasr-language-schools/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/04/IMG-20230407-WA0008-768x592.jpg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 22,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Hassan Sabban Madkour Street, Faisal, Giza",
+        "lat": "30.01252",
+        "lng": "31.18327"
+      }
+    ]
+  },
+  {
+    "title": "Rawdat Misr School",
+    "link": "https://egyptschools.info/school/rawdat-misr-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/04/309093307_577251524193772_5242220650319095510_n-e1680820198717-768x462.jpeg",
+    "educationType": "Preparatory Stage (Middle School)",
+    "fees": "Starting fees: 10,002 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "8 Samaan Street, Shubra, Cairo",
+        "lat": "30.08792",
+        "lng": "31.24346"
+      }
+    ]
+  },
+  {
+    "title": "Kayan College",
+    "link": "https://egyptschools.info/school/kayan-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/01/321430754_843717323376797_2721995983775109369_n-768x768.jpeg",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 121,500 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "First Settlement, New Cairo, Cairo",
+        "lat": "30.05434",
+        "lng": "31.26486"
+      }
+    ]
+  },
+  {
+    "title": "Brighton British School - BBS",
+    "link": "https://egyptschools.info/school/brighton-british-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/01/326815340_894879778533474_8931881812396175943_n-768x512.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 120,500 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Fourth District, El Shorouk City, Cairo",
+        "lat": "30.12679",
+        "lng": "31.62774"
+      }
+    ]
+  },
+  {
+    "title": "Mastery International School",
+    "link": "https://egyptschools.info/school/mastery-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/01/311921165_468597995337394_4105847256956134428_n-768x768.jpeg",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 54,600 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Ring Road, Mokattam, Cairo",
+        "lat": "29.99080",
+        "lng": "31.33410"
+      }
+    ]
+  },
+
+  {
+    "title": "International Public School Rod Elfarag - IPS",
+    "link": "https://egyptschools.info/school/international-public-school-rod-elfarag/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/01/312909994_108302842087158_4215167702449683435_n-768x512.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 15,460 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Behind Culture Palace, Rod Elfarag, Shubra, Cairo",
+        "lat": "30.07192",
+        "lng": "31.23306"
+      }
+    ]
+  },
+  {
+    "title": "Asten College",
+    "link": "https://egyptschools.info/school/asten-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2023/01/2023-07-07.jpg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 134,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Inside Taj City Compound, Nasr City, Cairo",
+        "lat": "30.06007",
+        "lng": "31.40850"
+      }
+    ]
+  },
+  {
+    "title": "Westview International Language School - WILS",
+    "link": "https://egyptschools.info/school/westview-international-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/310521754_152649374127766_641243043598735354_n-768x768.jpeg",
+    "educationType": "American Diploma, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 42,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Cosmic Village, 6th of October City, Giza",
+        "lat": "29.92516",
+        "lng": "31.07106"
+      }
+    ]
+  },
+  {
+    "title": "Scholars International Language School - SILS",
+    "link": "https://egyptschools.info/school/scholars-international-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/311589861_149495407782537_8357983816420544360_n.jpeg",
+    "educationType": "British IGCSE, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 36,733 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Cosmic Village, 6th of October City, Giza",
+        "lat": "29.92515",
+        "lng": "31.07104"
+      }
+    ]
+  },
+  {
+    "title": "The British School in Cairo - BSC",
+    "link": "https://egyptschools.info/school/the-british-school-in-cairo/",
+    "image": "https://egyptschools.info/wp-content/uploads/2020/07/JIhNPVIrlTRRNoj6EKoaeUjyFU0oqfsjLDLCbid3.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 88,500 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "3 Ring Road, Near Modern Academy, Maadi, Cairo",
+        "lat": "29.98251",
+        "lng": "31.33080"
+      }
+    ]
+  },
+  {
+    "title": "Elite Language School",
+    "link": "https://egyptschools.info/school/elite-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/Screen-Shot-2022-12-20-at-5.00.30-PM-1-768x268.png",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 39,500 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Sakan Misr Compound, 800 Acres, Oasis Road, New 6th of October City, Giza",
+        "lat": "29.92017",
+        "lng": "30.91908"
+      }
+    ]
+  },
+  {
+    "title": "Dar Al Maaref Language School",
+    "link": "https://egyptschools.info/school/dar-al-maaref-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/11845045_1047355058607838_7340434343966882991_o-768x512.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 19,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Dr. Hassanein Hassany Street, Off Amr Ibn El-Aas, Faisal, Giza",
+        "lat": "31.70000",
+        "lng": "35.95000"
+      }
+    ]
+  },
+  {
+    "title": "Oakland College Egypt",
+    "link": "https://egyptschools.info/school/oakland-college-egypt/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/319122826_1215666345996181_4721400882195456934_n-768x432.jpeg",
+    "educationType": "American Diploma, British IGCSE",
+    "fees": "Starting fees: 86,600 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Behind Mall of Arabia, 6th of October City, Giza",
+        "lat": "30.01431",
+        "lng": "30.96977"
+      }
+    ]
+  },
+  {
+    "title": "Regent British School West - RBS West",
+    "link": "https://egyptschools.info/school/regent-british-school-west/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/p1-768x380.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 68,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Cosmic Village, 6th of October City, Giza",
+        "lat": "29.92425",
+        "lng": "31.06873"
+      }
+    ]
+  },
+  {
+    "title": "Kaizen Language School",
+    "link": "https://egyptschools.info/school/kaizen-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/2022-06-10-768x576.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 23,400 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Automatic Slaughterhouse, El-Lebeini, Giza",
+        "lat": "29.97055",
+        "lng": "31.16561"
+      }
+    ]
+  },
+  {
+    "title": "Norwich International College",
+    "link": "https://egyptschools.info/school/norwich-international-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/318356389_107209128903259_163619874664987671_n-768x432.jpeg",
+    "educationType": "American Diploma, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 45,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "10th District, School Services Area 3, Sheikh Zayed City, Giza",
+        "lat": "33.62814",
+        "lng": "37.37691"
+      }
+    ]
+  },
+  {
+    "title": "Core West College",
+    "link": "https://egyptschools.info/school/core-west-college/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/12/006-3-scaled-1-768x512.jpeg",
+    "educationType": "American Diploma, British IGCSE, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 53,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "First Neighborhood, 13th District, Sheikh Zayed City, Giza",
+        "lat": "30.05661",
+        "lng": "30.99106"
+      }
+    ]
+  },
+  {
+    "title": "The Egyptian Language School Elsherouk - ELS",
+    "link": "https://egyptschools.info/school/the-egyptian-language-school-elsherouk/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/11/1234-e1669811297355-768x501.jpeg",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 75,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Opposite Green Hills Club, South Dar Misr, El Shorouk City, Cairo",
+        "lat": "30.15401",
+        "lng": "31.63938"
+      }
+    ]
+  },
+  {
+    "title": "Mount International School Community - MISC",
+    "link": "https://egyptschools.info/school/mount-international-school-community/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/11/301074832_106415848861176_8352949605144179031_n-768x768.jpg",
+    "educationType": "International Baccalaureate (IB)",
+    "fees": "Starting fees: 98,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "R2, SC-D1-5, New Administrative Capital, Cairo",
+        "lat": "30.03809",
+        "lng": "31.66448"
+      }
+    ]
+  },
+  {
+    "title": "Sahara International School New Capital",
+    "link": "https://egyptschools.info/school/sahara-international-school-new-capital/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/10/Screen-Shot-2022-10-16-at-2.33.17-PM-768x370.png",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 110,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "R3, New Administrative Capital, Sheikh Mohamed Bin Zayed Residential Complex",
+        "lat": "30.02471",
+        "lng": "31.69423"
+      }
+    ]
+  },
+  {
+    "title": "Saint Joseph School",
+    "link": "https://egyptschools.info/school/saint-joseph-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/11/297405029_139230348795955_4659980739418660637_n-768x772.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 37,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "3/13 Services Area, District (S), Pyramids Gardens, Giza",
+        "lat": "29.95036",
+        "lng": "31.09883"
+      }
+    ]
+  },
+  {
+    "title": "International Public School 5th Settlement - IPS",
+    "link": "https://egyptschools.info/school/international-public-school-5th-settlement/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/11/Screen-Shot-2022-11-01-at-2.17.16-PM-768x524.png",
+    "educationType": "British IGCSE",
+    "fees": "Starting fees: 19,500 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Street 12, Fifth District, Second Zone, Fifth Settlement, New Cairo, Cairo",
+        "lat": "29.99876",
+        "lng": "31.42000"
+      }
+    ]
+  },
+  {
+    "title": "Saxony International School - SIS",
+    "link": "https://egyptschools.info/school/saxony-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2021/09/sis-768x489.jpg",
+    "educationType": "International Baccalaureate (IB)",
+    "fees": "Starting fees: 115,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Inside O West Compound, Oasis Road, 6th of October City, Giza",
+        "lat": "29.95982",
+        "lng": "31.00387"
+      }
+    ]
+  },
+  {
+    "title": "Nefertari International School October - NIS",
+    "link": "https://egyptschools.info/school/nefertari-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2020/07/nef-768x381.jpg",
+    "educationType": "American Diploma, British IGCSE, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 47,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Gamal Abdel Nasser Street, Northern Extensions, 6th of October City, Giza",
+        "lat": "29.98592",
+        "lng": "30.93579"
+      }
+    ]
+  },
+  {
+    "title": "Open Sky International School",
+    "link": "https://egyptschools.info/school/open-sky-international-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/237607336_110255671369310_7450013161888067241_n-e1655900511848-768x178.jpg",
+    "educationType": "British IGCSE, International Baccalaureate (IB)",
+    "fees": "Starting fees: 152,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "4 Abdel Qawy Ahmed Street, El Maza, Heliopolis, Cairo",
+        "lat": "30.09316",
+        "lng": "31.33985"
+      }
+    ]
+  },
+  {
+    "title": "Cairo English School - CES",
+    "link": "https://egyptschools.info/school/cairo-english-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2020/07/cairo-english-school-768x258.jpg",
+    "educationType": "British IGCSE, International Baccalaureate (IB)",
+    "fees": "Starting fees: 124,600 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Suez Road, Near Mirage City Compound, New Cairo, Cairo",
+        "lat": "30.07967",
+        "lng": "31.45094"
+      }
+    ]
+  },
+  {
+    "title": "New Century Language School",
+    "link": "https://egyptschools.info/school/new-century-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/120928226_164331608653307_5624510161619436693_n-768x576.jpeg",
+    "fees": "Starting fees: 7,000 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "El-Maaskar Street, Near Al-Bashary Mosque, Abu Rawash, Giza",
+        "lat": "30.05782",
+        "lng": "31.08164"
+      }
+    ]
+  },
+  {
+    "title": "Qawmia Language School",
+    "link": "https://egyptschools.info/school/qawmia-language-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/05/244610721_171420288507103_2426083791871497844_n-768x512.jpeg",
+    "educationType": "American Diploma, Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 8,140 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "25 El-Faluja Street, Agouza, Giza",
+        "lat": "30.05533",
+        "lng": "31.21413"
+      }
+    ]
+  },
+  {
+    "title": "Al-Farouk Omar Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/al-farouk-omar-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/2017_7_11_19_9_35_448.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "9th Neighborhood, American Project, Helwan, Cairo",
+        "lat": "29.84628",
+        "lng": "31.35456"
+      }
+    ]
+  },
+  {
+    "title": "Al-Sayeda Aisha Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/al-sayeda-aisha-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/86292602_2789878431100565_7928897421013155840_n-768x576.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "El-Maasara Entrance, Autostrad Road, Near 30 July School, Cairo",
+        "lat": "29.90315",
+        "lng": "31.30630"
+      }
+    ]
+  },
+  {
+    "title": "Dr. Magdi Yacoub Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/dr-magdi-yacoub-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/Screen-Shot-2022-06-01-at-9.27.39-PM-768x447.png",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "El-Abd 700, Near El-Abd Housing Office, Madinet El Salam, Cairo",
+        "lat": "30.17823",
+        "lng": "31.41363"
+      }
+    ]
+  },
+  {
+    "title": "Field Marshal Saad El-Shazly Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/saad-el-shazly-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/262281799_10158632935561478_4412318794834613600_n.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Second District, Fourth Neighborhood, Badr City, Cairo",
+        "lat": "30.15628",
+        "lng": "31.70144"
+      }
+    ]
+  },
+  {
+    "title": "Al-Zahraa Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/al-zahraa-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/836.jpeg",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": 5,
+    "location": [
+      {
+        "address": "Near Majed Shaker Mosque, 10th District, Nasr City, Cairo",
+        "lat": "30.04279",
+        "lng": "31.39207"
+      }
+    ]
+  },
+  {
+    "title": "Omar Ibn El-Khattab Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/omar-ibn-el-khattab-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/Screen-Shot-2022-06-01-at-4.05.59-PM-768x500.png",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 3,000 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "Near Third Nasr City Police Station, Nasr City, Cairo",
+        "lat": "30.07221",
+        "lng": "31.37791"
+      }
+    ]
+  },
+  {
+    "title": "Mohamed Ghoneim Official Distinguished Language School",
+    "link": "https://egyptschools.info/school/mohamed-ghoneim-school/",
+    "image": "https://egyptschools.info/wp-content/uploads/2022/06/download-2-768x576.png",
+    "educationType": "Egyptian General Secondary (Thanaweya Amma)",
+    "fees": "Starting fees: 2,694 EGP",
+    "rating": null,
+    "location": [
+      {
+        "address": "El-Helmiya Square, Zaitoun, Cairo",
+        "lat": "30.11110",
+        "lng": "31.31603"
+      }
+    ]
+  }
+]

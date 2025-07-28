@@ -1,0 +1,68 @@
+@use "../vars/forwarder" as *;
+
+.paginationBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+
+
+  .paginationDots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: $montserrat;
+
+    &.paginationBtn {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color;
+      color: $secondary-text;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+      background: $surface-color;
+      color: $primary-text;
+    }
+
+
+
+    &.paginationDot {
+      width: 30px;
+      height: 30px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $surface-color;
+      color: $primary-text;
+
+
+      &.active {
+        background-color: $primary-color;
+        color: $secondary-text;
+      }
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+}

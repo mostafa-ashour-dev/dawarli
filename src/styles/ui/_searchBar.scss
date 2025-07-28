@@ -1,0 +1,42 @@
+@use "../vars/forwarder" as *;
+
+.searchBarHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    padding: 0 0 0 1.5rem;
+    background: $surface-color;
+    border: 1px solid #e0e0e0;
+    border-radius: $rounded-border-radius;
+    min-width: 30%;
+
+    svg {
+      color: $muted-text;
+    }
+    input {
+      background: none;
+      border: none;
+      padding: 1rem;
+      font-family: $montserrat;
+      font-size: 0.9rem;
+      color: $primary-text;
+      outline: none;
+
+      &::placeholder {
+        color: $muted-text;
+      }
+    }
+  }
+}

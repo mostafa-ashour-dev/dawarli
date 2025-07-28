@@ -1,0 +1,69 @@
+"use client";
+
+
+import { cities, educationTypes } from "@/constants/filtersOptions";
+import "@/styles/navbars/_sideBar.scss"
+import { useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
+
+export default function SideBar({headerText, headerIcon, page, changeHandler, overview}) {
+
+    function handleClickChange(type) {
+        if(type === "plus" && overview < 5) {
+            changeHandler({target: {name: "overview", value: overview + 0.5}});
+        } else if (type === "minus" && overview > 2.5) {
+            changeHandler({target: {name: "overview", value: overview - 0.5}});
+        } 
+        
+    }
+
+   
+
+    return (
+        <aside className="sidebar">
+            <header className=""> 
+                {headerIcon}
+                <h2>{headerText}</h2> 
+            </header>
+
+            <div className="sidebarFields">
+                {page && page !== "/teachers" ? (
+                    <div className="filtersContainer">
+                        <div className="filterField">
+                            <label htmlFor="city">City</label>
+                            <select name="city" defaultValue="all" onChange={changeHandler} id="city">
+                                <option value="all">All</option>
+                                {
+                                    cities.map((city, index) => (
+                                        <option key={index} value={city}>{city}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+
+                        <div className="filterField">
+                            <label htmlFor="type">Education Type</label>
+                            <select name="type" defaultValue="all" onChange={changeHandler} id="type">
+                                <option value="all">All</option>
+                                {
+                                    educationTypes.map((educationType, index) => (
+                                        <option key={index} value={educationType}>{educationType}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+
+                        <div className="filterField">
+                            <label htmlFor="overview">Overview</label>
+                            <div className="overviewField">
+                                <button className="minusBtn" onClick={() => handleClickChange("minus")}><FaMinus /></button>
+                                <input type="text" min={0} max={5} maxLength={1} value={overview} onChange={changeHandler} />
+                                <button className="plusBtn" onClick={() => handleClickChange("plus")}><FaPlus /></button>
+                            </div>
+                        </div>
+                    </div>
+                ) : <p>Sort By</p>}
+            </div>
+        </aside>
+    )
+}

@@ -1,0 +1,14 @@
+// app/globals.scss
+
+@use "../styles/globalStyles";
+
+@use "../styles/navbars/topNavbar";
+@use "../styles/navbars/sideBar";
+
+@use "../styles/ui/btn";
+@use "../styles/pages/schoolsPage";
+
+@use "../styles/cards/schoolCard";
+@use "../styles/ui/searchBar";
+
+@use "../styles/ui/paginationBar";
