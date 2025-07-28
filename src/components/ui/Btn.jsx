@@ -10,15 +10,15 @@ function checkIfExternalURL(url) {
 export default function Btn({text, onClick, link, active}) {
     if (link && checkIfExternalURL(link)) {
         return (
-            <a href={link} className={`btn ${active ? "active" : ""}`}>{text}</a>
+            <a href={link} className={`btn ${active ? "active" : ""}`} onClick={onClick && onClick}>{text}</a>
         )
     } else if (link && !checkIfExternalURL(link)) {
         return (
-            <Link href={link} className={`btn ${active ? "active" : ""}`}>{text}</Link>
+            <Link href={link} className={`btn ${active ? "active" : ""}`} onClick={onClick && onClick}>{text}</Link>
         )
     } else {
         return (
-            <button className={`btn ${active ? "active" : ""}`} onClick={onClick}>{text}</button>
+            <button className={`btn ${active ? "active" : ""}`} onClick={onClick && onClick}>{text}</button>
         )
     }
 }

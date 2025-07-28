@@ -11,6 +11,11 @@ export default function TopNavbar() {
      setRoute(window.location.pathname);
    }, [])
 
+   const [active, toggleActive] = useState({
+    btn1: true,
+    btn2: false
+   })
+
 
     return (
         <nav className='navbar'>
@@ -40,8 +45,18 @@ export default function TopNavbar() {
             </div>
 
             <div className="navRight">
-                <Btn link={"/"} text="Schools" active={route && route === "/" ? true : false} />
-                <Btn link={"/teachers"} text="Teachers" active={route && route === "/teachers" ? true : false} />
+                <Btn link={"/"} text="Schools" active={active.btn1} onClick={() => {
+                    toggleActive({
+                        btn1: true,
+                        btn2: false
+                    })
+                }} />
+                <Btn link={"/teachers"} text="Teachers" active={active.btn2} onClick={() => {
+                    toggleActive({
+                        btn1: false,
+                        btn2: true
+                    })
+                }} />
             </div>
 
 

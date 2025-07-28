@@ -36,7 +36,7 @@ async function getSchools(filterData) {
     return res.data;
 }
 
-export default function SchoolPage() {
+export default function SchoolsPage() {
 
     const [filterData, setFilterData] = useState({
         city: "",
@@ -52,8 +52,6 @@ export default function SchoolPage() {
     function handleFiltersChange(e, type) {
         if (type === "search") {
             e.preventDefault();
-
-            if (!e.target.query.value) return;
 
             setFilterData({ ...filterData, query: e.target.query.value });
 
@@ -90,8 +88,8 @@ export default function SchoolPage() {
     return (
         <main className="mainWrapper">
             <SideBar headerText={"Filters"} headerIcon={<FaFilter />} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
-            <section className="schoolsSection">
-                <SearchBar headerText={"Showing school results in \"Egypt\" "} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
+            <section className="sectionContainer">
+                <SearchBar headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
                 <div className="gridContainer">
                     {data && data?.schools.map((school, index) => (<SchoolCard title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />))}
                 </div>

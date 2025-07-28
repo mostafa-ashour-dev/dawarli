@@ -1,11 +1,11 @@
 
-import SchoolPage from "@/components/pages/SchoolPage";
+import SchoolsPage from "@/components/pages/SchoolsPage";
 import "./globals.scss";
 
 export default function Home() {
   return ( 
     <>
-      <SchoolPage />
+      <SchoolsPage />
     </>
   );
 }
