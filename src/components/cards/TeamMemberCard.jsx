@@ -11,7 +11,8 @@ const iconMap = {
 };
 
 
-export default function TeamMemberCard({ avatar, name, profession, description, scoialLinks, portfolio }) {
+export default function TeamMemberCard({ avatar, name, profession, description, socialLinks, portfolio }) {
+      
     return (
         <div className="teamMemberCard">
             <div className="teamMemberTopInfo">
@@ -30,7 +31,7 @@ export default function TeamMemberCard({ avatar, name, profession, description, 
             <div className="buttons">
                 <ul>
 {
-    scoialLinks && scoialLinks.map((link) => <li key={link.id}><a href={link.link} target="_blank" rel="noopener noreferrer" >{iconMap[link.name]}</a></li>)
+    socialLinks && socialLinks.map((link, index) => <li key={index}><a href={link.url} target="_blank" rel="noopener noreferrer" >{iconMap[link.platform]}</a></li>)
 }
 
                 </ul>
