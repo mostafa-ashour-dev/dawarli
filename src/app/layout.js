@@ -5,9 +5,45 @@ import "./globals.scss";
 export const metadata = {
   title: {
     default: "Edu-Findr",
-    template: "Edu-Findr | %s",
+    template: "%s | Edu-Findr - Find the Best Schools & Teachers Near You",
   },
-  description: "Search for schools and teachers in your area.",
+  description:
+    "Discover top-rated schools and qualified teachers in your area with Edu-Findr. Compare options, read reviews, and make the right choice for your education journey.",
+  keywords: [
+    "Edu-Findr",
+    "schools in Egypt",
+    "find schools",
+    "compare schools",
+    "best schools",
+    "school directory",
+    "teachers in Egypt",
+    "find teachers",
+    "education platform",
+    "Egypt schools search",
+  ],
+  openGraph: {
+    title: "Edu-Findr - Find the Best Schools & Teachers Near You",
+    description:
+      "Explore, compare, and connect with top schools and teachers in your area. Edu-Findr makes it easier to choose the best education for your child.",
+    url: "https://edu-findr.vercel.app/",
+    siteName: "Edu-Findr",
+    images: [
+      {
+        url: "https://edu-findr.vercel.app/imgs/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Edu-Findr - Education Finder",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Edu-Findr - Find the Best Schools & Teachers",
+    description:
+      "Discover the perfect school or teacher with Edu-Findr. Read reviews, compare options, and get informed before you decide.",
+    images: ["https://edu-findr.vercel.app/imgs/og-image.png"],
+  },
 };
 
 import TopNavbar from "@/components/navbars/TopNavbar";
