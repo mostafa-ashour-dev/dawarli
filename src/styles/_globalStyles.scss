@@ -1,24 +1,40 @@
 @use "./vars/forwarder" as *;
 
-
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 body {
-    font-family: $poppins;
-    background-color: $body-bg;
-    color: $primary-text;
+  font-family: $poppins;
+  background-color: $body-bg;
+  color: $primary-text;
+  font-size: 20px;
 
-    font-size: 20px;
+  &.overflowHidden {
+    overflow: hidden;
+  }
 }
 
 [lang="ar"] body {
-    font-family: $noto;
+  font-family: $noto;
 }
 
+.starRating {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.2rem;
+
+  svg {
+    color: gold;
+    font-size: 0.8rem;
+  }
+}
+
+.margin{
+  margin: $nav-height 0;
+}

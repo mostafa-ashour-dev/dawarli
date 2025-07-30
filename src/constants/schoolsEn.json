@@ -6,7 +6,13 @@
     "educationType": "Egyptian General Secondary (Thanaweya Amma)",
     "fees": "",
     "rating": null,
-    "location": null
+    "location": [
+      {
+        "address": "28VG+PW6, Al Khalifa Al Zaher, Al Hay as Sabea, Nasr City, Cairo Governorate 4432050",
+        "lat": "30.0442806",
+        "lng": "31.3272782"
+      }
+    ]
   },
   {
     "title": "Cairo West International School",
@@ -47,7 +53,7 @@
     "rating": null,
     "location": [
       {
-        "address": "Giza, Egypt",
+        "address": "Gate (5) -Behind, MALL OF EGYPT, El Wahat Rd, First 6th of October, Giza Governorate 12578",
         "lat": "29.97575",
         "lng": "31.01495"
       }

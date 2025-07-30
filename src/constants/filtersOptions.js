@@ -22,7 +22,8 @@ export const cities = [
     "Rod El Farag",
     "El Maza - Heliopolis",
     "Suez Road",
-    "El Obour City"
+    "El Obour City",
+    "Giza"
 ];
 
 
@@ -34,4 +35,11 @@ export const educationTypes = [
     "Italian Diploma (IDM)",
     "SABIS Diploma",
     "Preparatory Stage (Middle School)"
+];
+
+
+export const stages = [
+    "Primary Stage",
+    "Preparatory Stage (Middle School)",
+    "Secondary Stage (High School)"
 ];

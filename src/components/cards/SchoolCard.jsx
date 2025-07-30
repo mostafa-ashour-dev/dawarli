@@ -4,10 +4,10 @@ import { cities } from "@/constants/filtersOptions";
 import StarRating from "../ui/StarRating";
 import { FaCity, FaGraduationCap } from "react-icons/fa";
 
-export default function SchoolCard({ image, title, educationType, city, location, link, rating }) {
+export default function SchoolCard({ onClick, image, title, educationType, city, location, link, rating }) {
 
     return (
-        <div className="schoolCard">
+        <div className="schoolCard" onClick={onClick}>
             <div className="schoolImage">
                 <img src={image || "https://via.placeholder.com/150"} alt={title} />
             </div>

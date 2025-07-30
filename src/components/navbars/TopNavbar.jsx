@@ -16,13 +16,27 @@ export default function TopNavbar() {
     btn2: false
    })
 
+    useEffect(() => {
+        if (route === "/") {
+            toggleActive({
+                btn1: true,
+                btn2: false
+            })
+        } else if (route === "/teachers") {
+            toggleActive({
+                btn1: false,
+                btn2: true
+            })
+        }
+    }, [route])
+
 
     return (
         <nav className='navbar'>
 
             <div className="navLeft">
                 <Link className="logo" href="/">
-                    <h1>Edu-Findr</h1>
+                   <img src="/imgs/logo.png" alt="logo" /> <h1>Edu-Findr</h1>
                 </Link>
 
                 <ul>

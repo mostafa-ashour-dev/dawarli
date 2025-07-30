@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import schoolData from "@/constants/schoolsEn.json";
+import teachersData from "@/constants/teachersEn.json";
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
@@ -7,41 +7,40 @@ export async function GET(request) {
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "10", 10);
     const query = searchParams.get("query") || "";
-    const type = searchParams.get("type") || "all";
     const city = searchParams.get("city") || "all";
-    const overview = searchParams.get("overview") || 5;
+    const type = searchParams.get("type") || "all";
+    const stages = searchParams.get("stagesTought") || "all";
 
-    let filteredSchools = [...schoolData];
+    let filterdTeachers = [...teachersData];
     if (type.toLowerCase() !== "all") {
-        filteredSchools = filteredSchools.filter(
+        filterdTeachers = filterdTeachers.filter(
             (school) => school.educationType?.toLowerCase() === type.toLowerCase()
         );
     }
 
-    if (city.toLowerCase() !== "all") {
-        filteredSchools = filteredSchools.filter(
-            (school) => school.location?.[0]?.address?.toLowerCase().includes(city.toLowerCase())
+    if (stages.toLowerCase() !== "all") {
+        filterdTeachers = filterdTeachers.filter(
+            (teacher) => teacher.stagesTought?.toLowerCase().includes(stages.toLowerCase())
         );
     }
 
-    if (overview) {
-        filteredSchools = filteredSchools.filter((school) => school.rating >= overview);
+    if (city.toLowerCase() !== "all") {
+        filterdTeachers = filterdTeachers.filter(
+            (teacher) => teacher.city?.toLowerCase().includes(city.toLowerCase())
+        );
     }
 
     if (query) {
-        filteredSchools = filteredSchools.filter((school) =>
-            school.title?.toLowerCase().includes(query.toLowerCase())
+        filterdTeachers = filterdTeachers.filter((teacher) =>
+            teacher.name?.toLowerCase().includes(query.toLowerCase())
         );
     }
 
-    filteredSchools.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-
-    const total = filteredSchools.length;
+    const total = filterdTeachers.length;
     const totalPages = Math.ceil(total / limit);
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
-    const paginatedData = filteredSchools.slice(startIndex, endIndex);
+    const paginatedData = filterdTeachers.slice(startIndex, endIndex);
 
     const pageInfo = {
         nextPage: endIndex < total ? { page: page + 1, limit } : null,
@@ -57,6 +56,6 @@ export async function GET(request) {
         page,
         next: pageInfo.nextPage,
         prev: pageInfo.prevPage,
-        schools: paginatedData,
+        teachers: paginatedData,
     });
 }

@@ -1,33 +1,33 @@
 "use client";
 
 
-import { cities, educationTypes } from "@/constants/filtersOptions";
+import { cities, educationTypes, stages } from "@/constants/filtersOptions";
 import "@/styles/navbars/_sideBar.scss"
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-export default function SideBar({headerText, headerIcon, page, changeHandler, overview}) {
+export default function SideBar({ headerText, headerIcon, page, changeHandler, overview }) {
 
     function handleClickChange(type) {
-        if(type === "plus" && overview < 5) {
-            changeHandler({target: {name: "overview", value: overview + 0.5}});
-        } else if (type === "minus" && overview > 2.5) {
-            changeHandler({target: {name: "overview", value: overview - 0.5}});
-        } 
-        
+        if (type === "plus" && overview < 5) {
+            changeHandler({ target: { name: "overview", value: overview + 0.5 } });
+        } else if (type === "minus" && overview > 0) {
+            changeHandler({ target: { name: "overview", value: overview - 0.5 } });
+        }
+
     }
 
-   
+
 
     return (
         <aside className="sidebar">
-            <header className=""> 
+            <header className="">
                 {headerIcon}
-                <h2>{headerText}</h2> 
+                <h2>{headerText}</h2>
             </header>
 
             <div className="sidebarFields">
-                {page && page !== "/teachers" ? (
+                {page && page !== "teachers" ? (
                     <div className="filtersContainer">
                         <div className="filterField">
                             <label htmlFor="city">City</label>
@@ -62,7 +62,44 @@ export default function SideBar({headerText, headerIcon, page, changeHandler, ov
                             </div>
                         </div>
                     </div>
-                ) : <p>Sort By</p>}
+                ) : (<div className="filtersContainer">
+                    <div className="filterField">
+                        <label htmlFor="type">Education Type</label>
+                        <select name="type" defaultValue="all" onChange={changeHandler} id="type">
+                            <option value="all">All</option>
+                            {
+                                educationTypes.map((educationType, index) => (
+                                    <option key={index} value={educationType}>{educationType}</option>
+                                ))
+                            }
+                        </select>
+                    </div>
+
+                        <div className="filterField">
+                            <label htmlFor="stagesTought">Grades</label>
+                            <select name="stagesTought" defaultValue="all" onChange={changeHandler} id="stagesTought">
+                                <option value="all">All</option>
+                                {
+                                    stages.map((stage, index) => (
+                                        <option key={index} value={stage}>{stage}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+
+                        <div className="filterField">
+                            <label htmlFor="city">City </label>
+                            <select name="city" defaultValue="all" onChange={changeHandler} id="city">
+                                <option value="all">All</option>
+                                {
+                                    cities.map((stage, index) => (
+                                        <option key={index} value={stage}>{stage}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+                </div>)
+                }
             </div>
         </aside>
     )

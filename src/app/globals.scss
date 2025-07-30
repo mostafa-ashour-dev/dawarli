@@ -7,8 +7,14 @@
 
 @use "../styles/ui/btn";
 @use "../styles/pages/schoolsPage";
+@use "../styles/pages/aboutPage";
+@use "../styles/pages/teamPage";
 
 @use "../styles/cards/schoolCard";
+@use "../styles/cards/teacherCard";
 @use "../styles/ui/searchBar";
 
 @use "../styles/ui/paginationBar";
+@use "../styles/ui/schoolDetails";
+
+@use "../styles/ui/chatBot";

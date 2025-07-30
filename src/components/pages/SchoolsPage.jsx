@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import PaginationBar from "../ui/PaginationBar";
+import SchoolDetails from "../ui/SchoolDetails";
 
 
 async function getSchools(filterData) {
@@ -41,11 +42,13 @@ export default function SchoolsPage() {
     const [filterData, setFilterData] = useState({
         city: "",
         type: "",
-        overview: 2.5,
+        overview: 0,
         query: "",
         page: 1,
         limit: 9
     });
+    const [currentIndex, setCurrentIndex] = useState(0);
+
 
     const query = useSearchParams().get("query");
     const router = useRouter();
@@ -60,7 +63,7 @@ export default function SchoolsPage() {
             return;
         }
 
-        if(type === "next" || type === "previous") {
+        if (type === "next" || type === "previous") {
             setFilterData({ ...filterData, page: filterData.page + (type === "next" ? 1 : -1) });
             return;
         }
@@ -85,17 +88,30 @@ export default function SchoolsPage() {
     });
 
 
+    const [showDetals, setShowDetails] = useState(false);
+
+    function handleShowDetails() {
+        setShowDetails(!showDetals);
+        document.body.classList.toggle("overflowHidden");
+    }
+
+
     return (
         <main className="mainWrapper">
             <SideBar headerText={"Filters"} headerIcon={<FaFilter />} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
             <section className="sectionContainer">
                 <SearchBar headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
                 <div className="gridContainer">
-                    {data && data?.schools.map((school, index) => (<SchoolCard title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />))}
+                    {data && data?.schools.length > 0 ? data?.schools.map((school, index) => (<SchoolCard onClick={() => {
+                        setCurrentIndex(index);
+                        handleShowDetails();
+                    }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <p className="noResults">School not found</p>}
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
             </section>
+
+            <SchoolDetails show={showDetals} handleShowDetails={handleShowDetails} title={data?.schools[currentIndex]?.title} image={data?.schools[currentIndex]?.image} location={data?.schools[currentIndex]?.location} educationType={data?.schools[currentIndex]?.educationType} rating={data?.schools[currentIndex]?.rating} />
         </main>
     )
 }
