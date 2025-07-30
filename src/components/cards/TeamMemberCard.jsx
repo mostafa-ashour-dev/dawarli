@@ -11,7 +11,7 @@ const iconMap = {
 };
 
 
-export default function TeamMemberCard({ avatar, name, profession, description, socialLinks, portfolio }) {
+export default function TeamMemberCard({ avatar, name, role, description, socialLinks, portfolio }) {
       
     return (
         <div className="teamMemberCard">
@@ -22,7 +22,7 @@ export default function TeamMemberCard({ avatar, name, profession, description, 
 
                 <div className="teamMemberInfo">
                     <h3>{name}</h3>
-                    <p>{profession}</p>
+                    <p>{role}</p>
                 </div>
             </div>
 

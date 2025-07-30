@@ -25,4 +25,31 @@ export const teamMembers = [
         ],
         portfolio: "https://mostafa-ahmed-dev.vercel.app/",
     },
-];
+    {
+        name: "Ziad Ahmed",
+        role: "Web Developer",
+        avatar: "/imgs/user-male.png",
+        description:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, facilis architecto sed dolorem, vel expedita quidem doloremque aut tempora reprehenderit labore. Ducimus harum consequuntur cumque cum explicabo? Sapiente, modi unde.",
+        socialLinks: null,
+        portfolio: "",
+    },
+    {
+        name: "Leeyan Mohamed",
+        role: "Data Analyst",
+        avatar: "/imgs/user-female.png",
+        description:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, facilis architecto sed dolorem, vel expedita quidem doloremque aut tempora reprehenderit labore. Ducimus harum consequuntur cumque cum explicabo? Sapiente, modi unde.",
+        socialLinks: null,
+        portfolio: "",
+    },
+    {
+        name: "Retaj Massoud",
+        role: "Cybersecurity Analyst",
+        avatar: "/imgs/user-female.png",
+        description:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, facilis architecto sed dolorem, vel expedita quidem doloremque aut tempora reprehenderit labore. Ducimus harum consequuntur cumque cum explicabo? Sapiente, modi unde.",
+        socialLinks: null,
+        portfolio: "",
+    },
+]; 

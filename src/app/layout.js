@@ -12,6 +12,7 @@ export const metadata = {
 
 import TopNavbar from "@/components/navbars/TopNavbar";
 import ChatBot from "@/components/ui/ChatBot";
+import Footer from "@/components/ui/Footer";
 
 export default function RootLayout({ children }) {
   return (
@@ -29,8 +30,8 @@ export default function RootLayout({ children }) {
         <StylesWrapper >
           <TopNavbar />
           {children}
-          <ChatBot enabled={false}/>
-
+          <ChatBot enabled={false} />
+          <Footer />
         </StylesWrapper>
       </body>
     </html>
