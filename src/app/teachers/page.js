@@ -1,4 +1,5 @@
 import TeachersPage from "@/components/pages/TeachersPage";
+import { Suspense } from "react";
 
 
 export const metadata = {
@@ -9,7 +10,9 @@ export default function Teachers() {
 
     return (
         <>
-            <TeachersPage />
+            <Suspense fallback={<div>Loading...</div>}>
+                <TeachersPage />
+            </Suspense>
         </>
     )
 }
