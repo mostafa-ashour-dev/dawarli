@@ -5,7 +5,7 @@ import "./globals.scss";
 export const metadata = {
   title: {
     default: "Edu-Findr",
-    template: "%s | Edu-Findr - Find the Best Schools & Teachers Near You",
+    template: " Edu-Findr | %s",
   },
   description:
     "Discover top-rated schools and qualified teachers in your area with Edu-Findr. Compare options, read reviews, and make the right choice for your education journey.",
