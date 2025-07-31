@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
         <StylesWrapper >
           <TopNavbar />
           {children}
-          <ChatBot enabled={false} />
+          <ChatBot enabled={true} />
           <Footer />
         </StylesWrapper>
       </body>
