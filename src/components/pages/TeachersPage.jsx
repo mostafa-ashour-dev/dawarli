@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
+import Loader from "../ui/Loader";
 
 
 async function getTeachers(filterData) {
@@ -96,7 +97,7 @@ export default function TeachersPage() {
             <section className="sectionContainer">
                 <SearchBar headerText={"Showing teachers results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a teacher..."} />
                 <div className="gridContainer">
-                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTought={teacher.stagesTought} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <p className="noResults">Teacher not found</p>}
+                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTought={teacher.stagesTought} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <p className="noResults">Teacher not found</p> || error && <p className="noResults">Something went wrong</p> || isLoading && <Loader />}
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />

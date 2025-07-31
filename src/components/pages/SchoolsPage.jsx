@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import PaginationBar from "../ui/PaginationBar";
 import SchoolDetails from "../ui/SchoolDetails";
+import Loader from "../ui/Loader";
 
 
 async function getSchools(filterData) {
@@ -105,7 +106,7 @@ export default function SchoolsPage() {
                     {data && data?.schools.length > 0 ? data?.schools.map((school, index) => (<SchoolCard onClick={() => {
                         setCurrentIndex(index);
                         handleShowDetails();
-                    }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <p className="noResults">School not found</p>}
+                    }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <p className="noResults">School not found</p> || error && <p className="noResults">Something went wrong</p> || isLoading && <Loader />}
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
