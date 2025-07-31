@@ -43,3 +43,29 @@ export const stages = [
     "Preparatory Stage (Middle School)",
     "Secondary Stage (High School)"
 ];
+
+export const subjects = [
+    "English",
+    "English Literature",
+    "Mathematics",
+    "History",
+    "Italian",
+    "Science",
+    "Physics",
+    "Chemistry",
+    "Art",
+    "Arabic",
+    "Business Studies",
+    "Economics",
+    "Italian Literature",
+    "Social Studies",
+    "Biology",
+    "French",
+    "Computer Science",
+    "Psychology",
+    "Geography",
+    "Music",
+    "Accounting",
+    "Environmental Science",
+    "Physical Education"
+];

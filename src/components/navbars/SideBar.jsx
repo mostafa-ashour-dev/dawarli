@@ -1,7 +1,7 @@
 "use client";
 
 
-import { cities, educationTypes, stages } from "@/constants/filtersOptions";
+import { cities, educationTypes, stages, subjects } from "@/constants/filtersOptions";
 import "@/styles/navbars/_sideBar.scss"
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
@@ -63,6 +63,19 @@ export default function SideBar({ headerText, headerIcon, page, changeHandler, o
                         </div>
                     </div>
                 ) : (<div className="filtersContainer">
+
+                        <div className="filterField">
+                            <label htmlFor="subject">Subject</label>
+                            <select name="subject" defaultValue="all" onChange={changeHandler} id="subject">
+                                <option value="all">All</option>
+                                {
+                                    subjects.map((subject, index) => (
+                                        <option key={index} value={subject}>{subject}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+
                     <div className="filterField">
                         <label htmlFor="type">Education Type</label>
                         <select name="type" defaultValue="all" onChange={changeHandler} id="type">
@@ -74,6 +87,8 @@ export default function SideBar({ headerText, headerIcon, page, changeHandler, o
                             }
                         </select>
                     </div>
+
+
 
                         <div className="filterField">
                             <label htmlFor="stagesTought">Grades</label>

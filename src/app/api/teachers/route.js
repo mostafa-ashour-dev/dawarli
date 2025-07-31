@@ -10,11 +10,18 @@ export async function GET(request) {
     const city = searchParams.get("city") || "all";
     const type = searchParams.get("type") || "all";
     const stages = searchParams.get("stagesTought") || "all";
+    const subject = searchParams.get("subject") || "all";
 
     let filterdTeachers = [...teachersData];
     if (type.toLowerCase() !== "all") {
         filterdTeachers = filterdTeachers.filter(
             (school) => school.educationType?.toLowerCase() === type.toLowerCase()
+        );
+    }
+
+    if (subject.toLowerCase() !== "all") {
+        filterdTeachers = filterdTeachers.filter(
+            (teacher) => teacher.subject?.toLowerCase().includes(subject.toLowerCase())
         );
     }
 

@@ -18,6 +18,7 @@ async function getTeachers(filterData) {
         type = "",
         city = "",
         stagesTought = "",
+        subject = "",
         query = "",
         page = 1,
         limit = 10
@@ -27,6 +28,7 @@ async function getTeachers(filterData) {
 
     if (type && type !== "all") params.set("type", type);
     if (city && city !== "all") params.set("city", city);
+    if (subject && subject !== "all") params.set("subject", subject);
     if (stagesTought && stagesTought !== "all") params.set("stagesTought", stagesTought) 
     if (query) params.set("query", query);
     if (page) params.set("page", page);
@@ -42,6 +44,7 @@ export default function TeachersPage() {
     const [filterData, setFilterData] = useState({
         type: "",
         city: "",
+        subject: "",
         stagesTought: "",
         query: "",
         page: 1,

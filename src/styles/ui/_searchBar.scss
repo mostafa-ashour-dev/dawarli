@@ -39,4 +39,14 @@
       }
     }
   }
+
+  @media screen and (max-width: 850px) {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 1rem;
+
+    .searchForm {
+      width: 100%;
+    }
+  }
 }

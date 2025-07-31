@@ -27,7 +27,7 @@
 
   .chatContainer {
     width: 350px;
-    height: 100%;
+    min-height: 500px;
     background: $surface-color;
     border-radius: $st-border-radius;
     border: 1px solid #e0e0e0;
