@@ -3,16 +3,53 @@
 .btn {
   cursor: pointer;
   border-radius: $rounded-border-radius;
-  padding: 0.5rem 2rem;
+  padding: 0.7rem 2rem;
   font-size: 0.9rem;
   text-decoration: none;
   font-family: $montserrat;
   font-weight: 700;
   background: $body-bg;
   color: $primary-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3rem;
+
+  &.showIconOnSmallScreen {
+    svg {
+      display: none;
+    }
+  }
 
   &.active {
     background-color: $primary-color;
     color: $secondary-text;
+  }
+
+  @media screen and (max-width: 584px) {
+    
+    font-size: .8rem ;
+    padding: .7rem 1rem;
+    
+    &.showIconOnSmallScreen {
+      svg {
+        display: inline-block;
+      }
+    }
+
+    &.hideTextOnSmallScreen {
+      &.active {
+        span {
+          display: inline-block;
+        }
+      }
+      span {
+        display: none;
+      }
+    }
+    
+  }
+    @media screen and (max-width: 450px) {
+    padding: .5rem .8rem;
   }
 }

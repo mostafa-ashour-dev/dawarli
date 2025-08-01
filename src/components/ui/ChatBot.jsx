@@ -16,7 +16,7 @@ export default function ChatBot({ enabled }) {
         {
             role: "user",
             content: "Hey there!",
-            createdAt: "12:01 PM"
+            createdAt: new Date()
         }]);
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ export default function ChatBot({ enabled }) {
         const newUserMessage = {
             role: "user",
             content: message.trim(),
-            createdAt: new Date().toLocaleTimeString(),
+            createdAt: new Date(),
         };
 
         setMessages(prev => [...prev, newUserMessage]);
@@ -47,7 +47,7 @@ export default function ChatBot({ enabled }) {
                 const botMessage = {
                     role: "bot",
                     content: result.response.text(),
-                    createdAt: new Date().toLocaleTimeString(),
+                    createdAt: new Date(),
                 };
 
                 setMessages(prev => [...prev, botMessage]);
@@ -168,6 +168,7 @@ export default function ChatBot({ enabled }) {
                 </header>
 
                 <div className="chatMessagesContainer" >
+                    <ChatCard content="Hello, I'm Cora Assistant! How can I help you today?" role="bot" time="Now" />
                     {messages.map((message, index) => <ChatCard key={index} content={message.content} role={message.role} time={message.createdAt} ref={index === messages.length - 1 ? lastMessageRef : null} />)}
                     {loading && <div className="loading-indicator">
                         <div className="spinner"></div>
@@ -181,7 +182,7 @@ export default function ChatBot({ enabled }) {
             </div>
 
             <button className="chatBtn" onClick={handleShow}>
-                <FaRobot />
+                <img src={"/imgs/robot.png"} />
             </button>
         </div>
     )

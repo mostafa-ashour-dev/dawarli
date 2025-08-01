@@ -214,4 +214,146 @@
       }
     }
   }
+
+  @media screen and (max-width: 950px) {
+    .schoolDetailsContainer {
+      .schoolDetailsContent {
+        flex-direction: column;
+
+        .schoolDetailsImage {
+          min-height: 300px;
+          max-height: 300px;
+          min-width: 100%;
+          max-width: 100%;
+        }
+
+        .schoolDetailsInfo {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .schoolDetailsContainer {
+      .schoolDetailsContent {
+        .schoolDetailsImage {
+          min-height: 250px;
+          max-height: 250px;
+        }
+
+        .schoolDetailsInfo {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .infoBox {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+
+    .backBtn {
+      color: $primary-color;
+    }
+
+    .schoolDetailsContainer {
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      padding-top: 5rem;
+
+      .schoolDetailsContent {
+        .schoolDetailsImage {
+          min-height: 250px;
+          max-height: 250px;
+        }
+
+        .schoolDetailsInfo {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .infoBox {
+        max-width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+
+    .backBtn {
+      color: $primary-color;
+    }
+
+    .schoolDetailsContainer {
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      padding-top: 5rem;
+
+      .schoolDetailsContent {
+        .schoolDetailsImage {
+          min-height: 200px;
+          max-height: 200px;
+        }
+
+        .schoolDetailsInfo {
+          .starRating {
+          svg {
+            font-size: 1rem;
+          }
+
+          margin-bottom: .5rem;
+        }
+          h2 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 0.7rem;
+            margin-top: .3rem;
+          }
+        }
+      }
+
+      .bottomContainer {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .infoBox {
+        max-width: 100%;
+      }
+    }
+  }
 }

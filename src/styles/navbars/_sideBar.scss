@@ -1,12 +1,23 @@
 @use "../vars/forwarder" as *;
 
 .sidebar {
-  // background-color: $surface-color;
   width: 25%;
   min-height: 100%;
   z-index: 999;
   padding: 3rem 0rem 2rem 3rem;
-  // border-right: 1px solid #e0e0e0;
+
+  .closeBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $primary-color;
+    display: none;
+  }
+
   header {
     display: flex;
     align-items: center;
@@ -99,6 +110,15 @@
     padding-right: 3rem;
     border-right: 1px solid #e0e0e0;
     width: 50%;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .closeBtn {
+      display: block;
+    }
     
   }
 }

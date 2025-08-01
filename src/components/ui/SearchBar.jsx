@@ -1,12 +1,17 @@
 "use client";
 
-import { FaSearch } from "react-icons/fa";
+import { FaFilter, FaSearch } from "react-icons/fa";
 
  
-export default function SearchBar({headerText, placeholder, changeHandler, query}) {
+export default function SearchBar({headerText, placeholder, changeHandler, query, handleShowFilters}) {
     return (
         <header className="searchBarHeader">
-            <h2>{headerText}</h2>
+            <div className="headerAndFilters">
+                <h2>{!query ? headerText : "Showing results for " + query || ""} </h2>
+                <button className="showFiltersBtn" onClick={handleShowFilters}>
+                    <FaFilter />
+                </button>
+            </div>
 
                     
             <form className="searchForm" onSubmit={(e) => {

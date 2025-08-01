@@ -49,7 +49,7 @@ export default function SchoolsPage() {
         limit: 9
     });
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const [showFilters, setShowFilters] = useState(false);
 
     const query = useSearchParams().get("query");
     const router = useRouter();
@@ -86,6 +86,7 @@ export default function SchoolsPage() {
             const [_key, params] = queryKey;
             return getSchools(params);
         },
+        refetchOnWindowFocus: false
     });
 
 
@@ -99,9 +100,9 @@ export default function SchoolsPage() {
 
     return (
         <main className="mainWrapper">
-            <SideBar headerText={"Filters"} headerIcon={<FaFilter />} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
+            <SideBar headerText={"Filters"} headerIcon={<FaFilter />} handleShowFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
             <section className="sectionContainer">
-                <SearchBar headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
+                <SearchBar handleShowFilters={() => setShowFilters(!showFilters)} headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
                 <div className="gridContainer">
                     {data && data?.schools.length > 0 ? data?.schools.map((school, index) => (<SchoolCard onClick={() => {
                         setCurrentIndex(index);

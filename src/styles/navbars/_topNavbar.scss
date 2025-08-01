@@ -14,13 +14,20 @@
   max-height: $nav-height;
   min-height: $nav-height;
   border-bottom: 1px solid #e0e0e0;
-  
+
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
   .navLeft {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    gap: 2rem;
 
     .logo {
       text-decoration: none;
@@ -28,6 +35,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
+      margin-right: 2rem;
       img {
         width: 40px;
         height: 40px;
@@ -63,9 +71,20 @@
 
   @media screen and (max-width: 810px) {
     padding: 1rem 2rem;
-    .navLeft ul{
+
+    .hamburger {
+      display: block;
+    }
+
+    &.active {
+      .navLeft ul {
+        display: flex;
+      }
+    }
+
+    .navLeft ul {
       position: absolute;
-      top: calc( 100% + 1px);
+      top: calc(100% + 1px);
       left: 0;
       width: 100%;
       background: $surface-color;
@@ -74,7 +93,47 @@
       padding: 2rem;
       border-bottom: 1px solid #e0e0e0;
       flex-direction: column;
+      display: none;
     }
-    
+  }
+  @media screen and (max-width: 584px) {
+    .navLeft {
+      .logo {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .navLeft {
+      .logo {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        h1 {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+   @media screen and (max-width: 416px) {
+    .navLeft {
+      .logo {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        h1 {
+          font-size: .9rem;
+          display: none;
+        }
+      }
+    }
   }
 }

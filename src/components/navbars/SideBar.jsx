@@ -4,9 +4,12 @@
 import { cities, educationTypes, stages, subjects } from "@/constants/filtersOptions";
 import "@/styles/navbars/_sideBar.scss"
 import { useState } from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 
-export default function SideBar({ headerText, headerIcon, page, changeHandler, overview }) {
+export default function SideBar({ headerText, headerIcon, showFilters, handleShowFilters, page, changeHandler, overview }) {
+
+
+    const [show, setShow] = useState(false);
 
     function handleClickChange(type) {
         if (type === "plus" && overview < 5) {
@@ -18,9 +21,11 @@ export default function SideBar({ headerText, headerIcon, page, changeHandler, o
     }
 
 
-
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar ${showFilters ? "active" : ""}`}>
+
+            <button className="closeBtn" onClick={handleShowFilters}><FaTimes /></button>
+
             <header className="">
                 {headerIcon}
                 <h2>{headerText}</h2>
