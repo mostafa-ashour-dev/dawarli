@@ -12,12 +12,7 @@ import {
 export default function ChatBot({ enabled }) {
 
     const [show, setShow] = useState(false);
-    const [messages, setMessages] = useState([
-        {
-            role: "user",
-            content: "Hey there!",
-            createdAt: new Date()
-        }]);
+    const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
     const [chat, setChat] = useState(null);
