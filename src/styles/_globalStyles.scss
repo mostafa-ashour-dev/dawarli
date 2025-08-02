@@ -48,7 +48,9 @@ body {
   align-items: start;
   flex-direction: column;
   position: relative;
-  z-index: 1100;
+  width: 100%;
+  bottom: 0;
+  z-index: 1001;
   p {
     font-size: .8rem;
     color: $muted-text;
@@ -100,7 +102,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1110 !important;
+  z-index: 1100 !important;
 
   .loader {
     width: 48px !important;

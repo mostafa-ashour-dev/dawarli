@@ -36,15 +36,32 @@
       justify-content: center;
       gap: 0.5rem;
       margin-right: 2rem;
+
       img {
         width: 40px;
-        height: 40px;
         object-fit: contain;
       }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 100%;
+        transform: translateY(5px);
+      }
       h1 {
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 2rem;
+        font-weight: 700;
         color: $primary-text;
+        line-height: 1.5rem;
+      }
+
+      p {
+        font-size: 0.5rem;
+        color: $muted-text;
+        margin-left: .1rem;
+        font-style: italic;
       }
     }
 
@@ -100,11 +117,20 @@
     .navLeft {
       .logo {
         img {
-          width: 30px;
-          height: 30px;
+          width: 35px;
+          height: 35px;
+        }
+
+        div {
+          transform: translateY(2px);
         }
         h1 {
           font-size: 1.2rem;
+          line-height: .9rem;
+        }
+
+        p {
+          display: none;
         }
       }
     }
@@ -131,6 +157,10 @@
         }
         h1 {
           font-size: .9rem;
+          display: none;
+        }
+
+        p {
           display: none;
         }
       }

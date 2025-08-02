@@ -7,7 +7,7 @@ export default function SearchBar({headerText, placeholder, changeHandler, query
     return (
         <header className="searchBarHeader">
             <div className="headerAndFilters">
-                <h2>{!query ? headerText : "Showing results for " + query || ""} </h2>
+                <h2>{!query ? headerText : "Showing results for " + `\"${query}\"` || ""} </h2>
                 <button className="showFiltersBtn" onClick={handleShowFilters}>
                     <FaFilter />
                 </button>

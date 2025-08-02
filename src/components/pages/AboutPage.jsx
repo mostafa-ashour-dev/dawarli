@@ -5,7 +5,7 @@
 export default function AboutPage() {
     return (
         <main className="aboutPage margin">
-            <h1>About Edu-Findr</h1>
+            <h1>About Dawarli</h1>
 
             <div className="aboutContainer">
                 <div className="aboutContent">
@@ -16,8 +16,8 @@ export default function AboutPage() {
                 </div>
 
                 <div className="aboutImage">
-                    <img src="/imgs/logo.png" alt="placeholder" />
-                    <h2>Edu-Findr</h2>
+                    <img src="/imgs/dawarli.png" alt="placeholder" />
+                    <h2>Dawarli</h2>
                 </div>
             </div>
         </main>

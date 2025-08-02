@@ -48,6 +48,14 @@
     gap: 1rem;
     padding: 2.5rem 2.5rem;
 
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
     .schoolDetailsContent {
       display: flex;
       justify-content: start;
@@ -271,7 +279,6 @@
   }
 
   @media screen and (max-width: 650px) {
-
     .backBtn {
       color: $primary-color;
     }
@@ -310,7 +317,6 @@
     }
   }
   @media screen and (max-width: 450px) {
-
     .backBtn {
       color: $primary-color;
     }
@@ -329,19 +335,19 @@
 
         .schoolDetailsInfo {
           .starRating {
-          svg {
-            font-size: 1rem;
-          }
+            svg {
+              font-size: 1rem;
+            }
 
-          margin-bottom: .5rem;
-        }
+            margin-bottom: 0.5rem;
+          }
           h2 {
             font-size: 1.3rem;
           }
 
           p {
             font-size: 0.7rem;
-            margin-top: .3rem;
+            margin-top: 0.3rem;
           }
         }
       }

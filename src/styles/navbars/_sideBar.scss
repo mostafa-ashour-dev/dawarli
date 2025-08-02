@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
 
     .filterField {
@@ -104,12 +104,17 @@
     }
   }
 
+  @media screen and (max-width: 810px) {
+    padding: 3rem 2rem;
+
+  }
+
   @media screen and (max-width: 750px) {
     position: fixed;
     background: $surface-color;
-    padding-right: 3rem;
+    padding-right: 2rem;
     border-right: 1px solid #e0e0e0;
-    width: 50%;
+    width: 55%;
     display: none;
 
     &.active {
@@ -121,4 +126,9 @@
     }
     
   }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+
 }

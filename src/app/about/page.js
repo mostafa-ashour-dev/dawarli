@@ -4,7 +4,7 @@ import AboutPage from "@/components/pages/AboutPage"
 
 export const metadata = {
     title: "About",
-    description: "About Edu-Findr and how it works.",
+    description: "About Dawarli and how it works.",
 }
 
 
