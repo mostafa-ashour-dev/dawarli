@@ -1,7 +1,6 @@
 @use "../vars/forwarder" as *;
 
 .aboutPage {
-  padding: 2rem 3rem;
   h1 {
     font-family: $montserrat;
     margin-bottom: 1rem;
@@ -52,5 +51,32 @@
         font-weight: 600;
       }
     }
+  }
+
+
+  @media screen and (max-width: 980px) {
+
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .aboutContainer {
+      flex-direction: column;
+      gap: 2rem;
+
+      .aboutContent {
+        width: 100%;
+
+        p {
+          font-size: .8rem;
+        }
+      }
+
+      .aboutImage {
+        width: 100%;
+      }
+    }
+    
   }
 }

@@ -34,7 +34,13 @@ body {
     font-size: 0.8rem;
   }
 }
+.padding {
+  padding: 2rem 3rem;
 
+  @media screen and (max-width: 810px) {
+    padding: 2rem;
+  }
+}
 .margin {
   margin: $nav-height 0;
 }
@@ -52,7 +58,7 @@ body {
   bottom: 0;
   z-index: 1000;
   p {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: $muted-text;
     font-family: $montserrat;
   }
@@ -61,7 +67,7 @@ body {
 .loader {
   width: 28px;
   height: 28px;
-  border: 3px solid #FFF;
+  border: 3px solid #fff;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -69,7 +75,7 @@ body {
   animation: rotation 1s linear infinite;
 }
 .loader::after {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -89,8 +95,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
-} 
-
+}
 
 .loader-container {
   display: flex;
@@ -101,7 +106,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 1110 !important;
 
   .loader {

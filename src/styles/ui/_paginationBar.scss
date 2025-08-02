@@ -7,6 +7,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: 4rem;
+  position: relative;
 
 
   .paginationDots {
@@ -64,5 +65,26 @@
     svg {
       font-size: 1rem;
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    .paginationBtn {
+      font-size: 1rem;
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &.next {
+        transform: translateX(20%);
+      }
+
+      &.prev {
+        transform: translateX(-100%);
+      }
+    }
+    
   }
 }

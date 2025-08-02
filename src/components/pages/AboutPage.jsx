@@ -4,7 +4,7 @@
 
 export default function AboutPage() {
     return (
-        <main className="aboutPage margin">
+        <main className="aboutPage margin padding">
             <h1>About Dawarli</h1>
 
             <div className="aboutContainer">

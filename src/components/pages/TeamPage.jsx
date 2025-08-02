@@ -10,7 +10,7 @@ import TeamMemberCard from "../cards/TeamMemberCard";
 export default function TeamPage() {
 
     return (
-        <main className="teamPage margin">
+        <main className="teamPage margin padding">
             <h1>Dawarli Team</h1>
 
             <div className="teamMembersContainer">

@@ -216,7 +216,11 @@ export default function ChatBot({ enabled }) {
     }
 
     return (
-        <div className={`chatBot ${show ? "active" : " "}`}>
+        <div onClick={(e) => {
+            if (e.target.classList.contains("chatBot")) {
+                handleShow();
+            }
+        }} className={`chatBot ${show ? "active" : " "}`}>
             <div className="chatContainer">
                 <button className="closeBtn" onClick={handleShow}><FaTimes /></button>
 
