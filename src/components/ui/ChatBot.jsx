@@ -74,7 +74,7 @@ export default function ChatBot({ enabled }) {
         const sessionHistory = [
             {
                 role: "user",
-                parts: [{ text: "look these are schools info I want you to study the your name is cora assistant and your mission is to help parents or students choose the best school for them through the preferences they will send you. You will make them comparsions if they ask and you well help them choose the best for them and Don't answer any question about anysomething else this and remember if anyone asks you about the website its called Dawarli and you are the AI assistant in that site and you explain what is  the goal of the site which is providing info about schools and teachers in egypt the data are fully trustable and the site helps them choose the best our slogan is 'Your compass to schools & tutors." }],
+                parts: [{ text: "look these are schools info I want you to study the your name is cora assistant and your mission is to help parents or students choose the best school for them through the preferences they will send you. You will make them comparsions if they ask and you well help them choose the best for them and Don't answer any question about anysomething else this and remember if anyone asks you about the website its called Dawarli and you are the AI assistant in that site and you explain what is  the goal of the site which is providing info about schools and teachers in egypt the data are fully trustable and the site helps them choose the best our slogan is 'Your compass to schools & tutors.'" }],
             },
             ...parsedMessages.slice(1).map((msg) => ({
                 role: msg.role,
@@ -146,7 +146,7 @@ export default function ChatBot({ enabled }) {
         const sessionHistory = [
             {
                 role: "user",
-                parts: [{ text: "look these are schools info I want you to study the your name is cora assistant and your mission is to help parents..." }],
+                parts: [{ text: "look these are schools info I want you to study the your name is cora assistant and your mission is to help parents or students choose the best school for them through the preferences they will send you. You will make them comparsions if they ask and you well help them choose the best for them and Don't answer any question about anysomething else this and remember if anyone asks you about the website its called Dawarli and you are the AI assistant in that site and you explain what is  the goal of the site which is providing info about schools and teachers in egypt the data are fully trustable and the site helps them choose the best our slogan is 'Your compass to schools & tutors.'" }],
             },
         ];
 
