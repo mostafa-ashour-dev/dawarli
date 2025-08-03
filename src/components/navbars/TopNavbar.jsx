@@ -1,9 +1,10 @@
 "use client";
 import "@/styles/navbars/_topNavbar.scss"
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useTransition } from 'react'
 import Btn from '../ui/Btn'
 import { FaBars, FaSchool, FaUserCheck } from "react-icons/fa";
+import Loader from "../ui/Loader";
 
 
 const navLinks = [
@@ -32,7 +33,15 @@ export default function TopNavbar() {
     const [active, toggleActive] = useState({
         btn1: true,
         btn2: false
-    })
+    });
+
+     const [isRouting, startTransition] = useTransition();
+    
+        function handleStartTransition() {
+            startTransition(() => {
+                return null
+            });
+        }
 
     useEffect(() => {
         if (route === "/") {
@@ -52,6 +61,8 @@ export default function TopNavbar() {
 
     return (
         <nav className={`navbar ${show && show ? "active" : ""}`}>
+
+            {isRouting && <Loader />}
 
             <div className="navLeft">
                 <button className="hamburger" onClick={() => {
@@ -83,13 +94,16 @@ export default function TopNavbar() {
                     toggleActive({
                         btn1: true,
                         btn2: false
-                    })
+                    });
+                    handleStartTransition();
+
                 }} />
                 <Btn link={"/teachers"} text="Teachers" icon={<FaUserCheck />} showIconOnSmallScreen={true} hideTextOnSmallScreen={true} active={active.btn2} onClick={() => {
                     toggleActive({
                         btn1: false,
                         btn2: true
-                    })
+                    });
+                    handleStartTransition();
                 }} />
             </div>
 

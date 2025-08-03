@@ -10,6 +10,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import PaginationBar from "../ui/PaginationBar";
 import SchoolDetails from "../ui/SchoolDetails";
 import Loader from "../ui/Loader";
+import NotFound from "../ui/NotFound";
+import SchoolCardSkeleton from "../cards/SchoolCardSkeleton";
 
 
 async function getSchools(filterData) {
@@ -103,11 +105,13 @@ export default function SchoolsPage() {
             <SideBar headerText={"Filters"} headerIcon={<FaFilter />} handleShowFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
             <section className="sectionContainer">
                 <SearchBar handleShowFilters={() => setShowFilters(!showFilters)} headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
-                <div className="gridContainer">
+                <div className={`gridContainer ${data && data?.schools.length === 0 && "noResults"}`}>
+                    {isLoading && Array(9).fill(0).map((_, index) => <SchoolCardSkeleton key={index + 1} />) || !data && Array(9).fill(0).map((_, index) => <SchoolCardSkeleton key={index + 1} />)}
+
                     {data && data?.schools.length > 0 ? data?.schools.map((school, index) => (<SchoolCard onClick={() => {
                         setCurrentIndex(index);
                         handleShowDetails();
-                    }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <p className="noResults">School not found</p> || error && <p className="noResults">Something went wrong</p> || isLoading && <Loader />}
+                    }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <NotFound query={filterData.query} notFoundString={"No schools found"} /> || error && <p className="noResults">Something went wrong</p>}
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />

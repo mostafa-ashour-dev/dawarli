@@ -18,7 +18,9 @@ export default function SearchBar({headerText, placeholder, changeHandler, query
                 changeHandler(e, "search");
             }}>
                 <FaSearch /> 
-                <input type="text" name="query" defaultValue={query || ""} placeholder={placeholder || "Search for a school..."} />
+                <input type="text" name="query" autoComplete="off" autoCapitalize="sentences" onChange={(e) => {
+                    if(e.value === "") changeHandler(e.target.parentElement, "search");
+                }} defaultValue={query || ""} placeholder={placeholder || "Search for a school..."} />
             </form>
         </header>
     )

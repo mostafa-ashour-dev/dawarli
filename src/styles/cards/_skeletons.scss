@@ -1,0 +1,83 @@
+@use "../vars/forwarder" as *;
+
+#animation {
+  animation: skeletonAnimation 3s infinite linear;
+}
+@keyframes skeletonAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.schoolCardSkeleton {
+  .schoolCardSkeletonImage {
+    @extend #animation;
+
+    width: 100%;
+    max-height: 160px;
+    min-height: 160px;
+    border-radius: $st-border-radius;
+    overflow: hidden;
+    background-color: $border-color;
+  }
+
+  .schoolCardSkeletonTitle {
+    width: 100%;
+    height: 20px;
+    margin-top: 0.5rem;
+    background-color: $border-color;
+    border-radius: calc($st-border-radius - 0.2rem);
+    @extend #animation;
+
+    & + * {
+      max-width: 90%;
+    }
+  }
+  .schoolCardSkeletonEducationType {
+    width: 50%;
+    height: 15px;
+    margin-top: 0.5rem;
+    background-color: $border-color;
+    border-radius: calc($st-border-radius - 0.2rem);
+    @extend #animation;
+  }
+
+  .schoolCardSkeletonRatingAndCityContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    .schoolCardSkeletonRating {
+      width: 30%;
+      height: 15px;
+      background-color: $border-color;
+      border-radius: calc($st-border-radius - 0.2rem);
+      @extend #animation;
+    }
+
+    .schoolCardSkeletonCity {
+      width: 40%;
+      height: 15px;
+      background-color: $border-color;
+      border-radius: calc($st-border-radius - 0.2rem);
+      @extend #animation;
+    }
+  }
+}
+
+.teacherCardSkeleton {
+  @extend #animation;
+
+  height: 140px;
+  width: 100%;
+  border-radius: $st-border-radius;
+  background-color: $border-color;
+}

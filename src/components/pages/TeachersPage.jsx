@@ -11,6 +11,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useRouter, useSearchParams } from "next/navigation";
 import Loader from "../ui/Loader";
+import NotFound from "../ui/NotFound";
+import TeacherCardSkeleton from "../cards/TeacherCardSkeleton";
 
 
 async function getTeachers(filterData) {
@@ -99,8 +101,9 @@ export default function TeachersPage() {
             <SideBar headerText={"Filters"} handleShowFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} headerIcon={<FaFilter />} overview={filterData.overview} changeHandler={handleFiltersChange} page={"teachers"} />
             <section className="sectionContainer">
                 <SearchBar headerText={"Showing teachers results in \"Egypt\" "} handleShowFilters={() => setShowFilters(!showFilters)} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a teacher..."} />
-                <div className="gridContainer">
-                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTought={teacher.stagesTought} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <p className="noResults">Teacher not found</p> || error && <p className="noResults">Something went wrong</p> || isLoading && <Loader />}
+                <div className={`gridContainer ${data && data?.teachers.length === 0 && "noResults"}`}>
+                    {isLoading && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />) || !data && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />)}
+                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTought={teacher.stagesTought} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <NotFound text={"No teachers found"} query={filterData.query} /> || error && <p className="noResults">Something went wrong</p> }
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />

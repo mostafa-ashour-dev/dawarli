@@ -137,6 +137,30 @@ body {
   animation: spin 1s linear infinite;
 }
 
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  canvas {
+    min-width: 250px !important;
+    height: 300px !important;
+    place-self: center;
+  }
+  p {
+    font-size: 1.2rem;
+    color: $muted-text;
+    font-family: $montserrat;
+    
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
