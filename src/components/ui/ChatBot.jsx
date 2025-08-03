@@ -127,7 +127,7 @@ export default function ChatBot({ enabled }) {
         initChat();
     }, []);
 
-    
+
 
     function handleResetChat() {
         const newInitialMessage = {
@@ -253,9 +253,16 @@ export default function ChatBot({ enabled }) {
                 </form>
             </div>
 
-            <button className="chatBtn" onClick={handleShow}>
-                <img src={"/imgs/robot.png"} />
-            </button>
+            <div className="chatBtnContainer">
+                <button className={`chatBtn ${messages.map((message) => message.role).includes("user") ? "" : "active"}`} onClick={handleShow}>
+                    <img src={"/imgs/robot.png"} />
+                </button>
+                {messages.map((message) => message.role).includes("user") ? "" : (
+                    <p>Have a question?</p>
+                )}
+            </div>
+
+
         </div>
     )
 }

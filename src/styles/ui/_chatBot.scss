@@ -242,6 +242,19 @@
     }
   }
 
+
+  .chatBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    p {
+      font-size: 1rem;
+      color: $muted-text;
+    }
+  }
+
   .chatBtn {
     min-width: 60px;
     min-height: 60px;
@@ -254,6 +267,27 @@
     font-size: 1.5rem;
     cursor: pointer;
     border: 1px solid #e0e0e0;
+    position: relative;
+
+    &.active {
+      &::after {
+        content: "1";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ff4250;
+        color: $secondary-text;
+        font-family: $montserrat;
+        font-weight: 700;
+        font-size: .8rem;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 
     img {
       width: 50px;
