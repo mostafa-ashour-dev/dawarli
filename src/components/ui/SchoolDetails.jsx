@@ -95,7 +95,7 @@ const schoolReviews = [
         name: "Daniel Kim",
         role: "Parent",
         content: "Very pleased with how the school handled distance learning during recent disruptions. They were well-prepared and maintained educational quality throughout.",
-        rating: 4.5,
+        rating: 3,
         img: "/imgs/user-male.png"
     },
     {
@@ -248,7 +248,7 @@ function getRandomDescription(title) {
 
 export default function SchoolDetails({ handleShowDetails, show, image, title, location, educationType, rating }) {
 
-    
+
     return (
         <div className={`schoolDetails ${show && show ? "active" : ""} `}>
 
@@ -266,7 +266,7 @@ export default function SchoolDetails({ handleShowDetails, show, image, title, l
                         <h2>{title || "School Name"}</h2>
                         <p>{descriptions[0].replace("{school_name}", title)}</p>
                         <div className="buttons">
-                            <Btn text={"Location"} link={"https://www.google.com/maps/search/" + title + (location && location[0]?.address || ", Egypt") || "https://www.google.com/maps/search/"} active={true} />
+                            <Btn text={"Location"} link={location && location[0].lat && location[0].lng && "https://www.google.com/maps?daddr=" + location[0].lat + "," + location[0].lng  || "https://www.google.com/maps/search/" + title + (location && location[0]?.address || ", Egypt")} active={true} />
 
                         </div>
                     </div>
