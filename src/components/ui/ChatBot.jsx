@@ -60,7 +60,7 @@ export default function ChatBot({ enabled }) {
             console.error("Can't send message", error);
             fireToast({
                 icon: "error",
-                title: "Chatbot is ready!",
+                title: "Can't send message!",
             })
         } finally {
             setLoading(false);
