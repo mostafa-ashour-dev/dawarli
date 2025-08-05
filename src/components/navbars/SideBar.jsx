@@ -59,7 +59,7 @@ export default function SideBar({ headerText, headerIcon, showFilters, handleSho
                         </div>
 
                         <div className="filterField">
-                            <label htmlFor="overview">Overview</label>
+                            <label htmlFor="overview">Rating</label>
                             <div className="overviewField">
                                 <button className="minusBtn" onClick={() => handleClickChange("minus")}><FaMinus /></button>
                                 <input type="text" min={0} max={5} maxLength={1} value={overview} onChange={changeHandler} />

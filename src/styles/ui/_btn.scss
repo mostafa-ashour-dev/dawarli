@@ -15,6 +15,7 @@
   align-items: center;
   border: none;
   gap: .3rem;
+  transition: $st-transition;
 
   &.showIconOnSmallScreen {
     svg {
