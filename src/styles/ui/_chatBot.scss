@@ -161,6 +161,11 @@
           background: $surface-color;
           color: $primary-text;
         }
+
+        &:hover {
+          background: $primary-color;
+          color: $secondary-text;
+        }
       }
     }
 
@@ -315,7 +320,7 @@
     &.active {
       padding: 0;
       
-      .chatBtn {
+      .chatBtnContainer {
         display: none;
       }
     }

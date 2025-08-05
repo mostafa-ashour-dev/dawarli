@@ -34,7 +34,7 @@
   .searchForm {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     gap: 0.5rem;
     padding: 0 0 0 1.5rem;
     background: $surface-color;
@@ -134,6 +134,7 @@
       font-size: 0.9rem;
       color: $primary-text;
       outline: none;
+      width: 100%;
 
       &::placeholder {
         color: $muted-text;

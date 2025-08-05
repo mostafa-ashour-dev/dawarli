@@ -8,6 +8,8 @@ import {
     HarmCategory,
     HarmBlockThreshold,
 } from "@google/generative-ai";
+import Swal from "sweetalert2";
+import fireToast from "@/utils/fireToast";
 
 export default function ChatBot({ enabled }) {
 
@@ -52,10 +54,14 @@ export default function ChatBot({ enabled }) {
                 };
 
                 setMessages(prev => [...prev, botMessage]);
-            }
+            };
 
         } catch (error) {
             console.error("Can't send message", error);
+            fireToast({
+                icon: "error",
+                title: "Chatbot is ready!",
+            })
         } finally {
             setLoading(false);
         }
@@ -123,7 +129,7 @@ export default function ChatBot({ enabled }) {
                 console.log("Failed to initialize chat session", err);
             }
         }
-
+   
         initChat();
     }, []);
 

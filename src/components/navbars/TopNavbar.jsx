@@ -90,7 +90,7 @@ export default function TopNavbar() {
             </div>
 
             <div className="navRight">
-                <Btn link={"/"} text="Schools" icon={<FaSchool />} showIconOnSmallScreen={true} hideTextOnSmallScreen={true} active={active.btn1} onClick={() => {
+                <Btn link={"/"} text="Schools" icon={<FaSchool />}  hideTextOnSmallScreen={true} active={active.btn1} onClick={() => {
                     toggleActive({
                         btn1: true,
                         btn2: false
@@ -98,7 +98,7 @@ export default function TopNavbar() {
                     handleStartTransition();
 
                 }} />
-                <Btn link={"/teachers"} text="Teachers" icon={<FaUserCheck />} showIconOnSmallScreen={true} hideTextOnSmallScreen={true} active={active.btn2} onClick={() => {
+                <Btn link={"/teachers"} text="Teachers" icon={<FaUserCheck />}  hideTextOnSmallScreen={true} active={active.btn2} onClick={() => {
                     toggleActive({
                         btn1: false,
                         btn2: true

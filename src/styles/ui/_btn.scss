@@ -27,6 +27,16 @@
     color: $secondary-text;
   }
 
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-text;
+
+    &.active {
+      background-color: $body-bg;
+      color: $primary-color;
+    }
+  }
+
   @media screen and (max-width: 584px) {
     
     font-size: .8rem ;
