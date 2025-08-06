@@ -65,8 +65,11 @@ export default function TeachersPage() {
 
             setFilterData({ ...filterData, query: e.target.query.value });
 
+            if (!e.target.query.value) {
+                router.push(`/teachers`);
+                return;
+            }
             router.push(`/teachers?query=${e.target.query.value}`);
-
             return;
         }
 
@@ -100,7 +103,7 @@ export default function TeachersPage() {
         <main className="mainWrapper">
             <SideBar headerText={"Filters"} handleShowFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} headerIcon={<FaFilter />} overview={filterData.overview} changeHandler={handleFiltersChange} page={"teachers"} />
             <section className="sectionContainer">
-                <SearchBar headerText={"Showing teachers results in \"Egypt\" "} handleShowFilters={() => setShowFilters(!showFilters)} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a teacher..."} />
+                <SearchBar headerText={"Showing teachers results in \"Egypt\" "} results={data && data?.teachers} handleShowFilters={() => setShowFilters(!showFilters)} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a teacher..."} />
                 <div className={`gridContainer ${data && data?.teachers.length === 0 && "noResults"}`}>
                     {isLoading && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />) || !data && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />)}
                     {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTaught={teacher.stagesTaught} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <NotFound text={"No teachers found"} query={filterData.query} /> || error && <p className="noResults">Something went wrong</p> }

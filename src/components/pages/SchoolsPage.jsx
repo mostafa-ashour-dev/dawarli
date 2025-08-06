@@ -61,8 +61,11 @@ export default function SchoolsPage() {
 
             setFilterData({ ...filterData, query: e.target.query.value });
 
+            if(!e.target.query.value) {
+                router.push(`/`);
+                return;
+            }
             router.push(`/?query=${e.target.query.value}`);
-
             return;
         }
 
@@ -104,7 +107,7 @@ export default function SchoolsPage() {
         <main className="mainWrapper">
             <SideBar headerText={"Filters"} headerIcon={<FaFilter />} handleShowFilters={() => setShowFilters(!showFilters)} showFilters={showFilters} overview={filterData.overview} changeHandler={handleFiltersChange} page={"/schools"} />
             <section className="sectionContainer">
-                <SearchBar handleShowFilters={() => setShowFilters(!showFilters)} headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
+                <SearchBar handleShowFilters={() => setShowFilters(!showFilters)} results={data && data?.schools} headerText={"Showing school results in \"Egypt\" "} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a school..."} />
                 <div className={`gridContainer ${data && data?.schools.length === 0 && "noResults"}`}>
                     {isLoading && Array(9).fill(0).map((_, index) => <SchoolCardSkeleton key={index + 1} />) || !data && Array(9).fill(0).map((_, index) => <SchoolCardSkeleton key={index + 1} />)}
 

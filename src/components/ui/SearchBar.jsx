@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaFilter, FaSearch, FaTimes, FaTrash } from "react-icons/fa";
 
-export default function SearchBar({ headerText, placeholder, changeHandler, query, handleShowFilters }) {
+export default function SearchBar({ headerText, placeholder, changeHandler, query, handleShowFilters, results }) {
     const [searchHistory, setSearchHistory] = useState([]);
     const formRef = useRef(null);
     const inputRef = useRef(null);
@@ -67,7 +67,7 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
     return (
         <header className="searchBarHeader">
             <div className="headerAndFilters">
-                <h2>{!query ? headerText : `Showing results for "${query}"`}</h2>
+                <h2>{!query ? headerText : results && results.length === 0 ? `No results for "${query}"` : `Showing results for "${query}"`}</h2>
                 <button className="showFiltersBtn" onClick={handleShowFilters}>
                     <FaFilter />
                 </button>
@@ -80,8 +80,10 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
                     e.preventDefault();
                     const value = e.target.query.value;
                     changeHandler(e, "search");
-                    handleAddSearchHistory(value);
 
+                    if(value === "") return;
+                    handleAddSearchHistory(value);
+                    
                 }}
             >
                 <FaSearch />
@@ -94,6 +96,9 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
                     defaultValue={query || ""}
                     placeholder={placeholder || "Search for a school..."}
                     onFocusCapture={() => setShowHistory(true)}
+                    onChange={() => {
+                        setShowHistory(false);
+                    }}
                 />
 
                 {query && query !== "" && (
