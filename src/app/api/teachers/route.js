@@ -1,7 +1,10 @@
+import connectDB from "@/lib/mongoose";
+import Teacher from "@/models/teacherModel";
 import { NextResponse } from "next/server";
-import teachersData from "@/constants/teachersEn.json";
 
 export async function GET(request) {
+    await connectDB();
+
     const { searchParams } = new URL(request.url);
 
     const page = parseInt(searchParams.get("page") || "1", 10);
@@ -9,60 +12,54 @@ export async function GET(request) {
     const query = searchParams.get("query") || "";
     const city = searchParams.get("city") || "all";
     const type = searchParams.get("type") || "all";
-    const stages = searchParams.get("stagesTought") || "all";
+    const stages = searchParams.get("stagesTaught") || "all";
     const subject = searchParams.get("subject") || "all";
 
-    let filterdTeachers = [...teachersData];
+    const filter = {};
+
     if (type.toLowerCase() !== "all") {
-        filterdTeachers = filterdTeachers.filter(
-            (school) => school.educationType?.toLowerCase() === type.toLowerCase()
-        );
+        filter.educationType = { $regex: type, $options: "i" };
     }
 
     if (subject.toLowerCase() !== "all") {
-        filterdTeachers = filterdTeachers.filter(
-            (teacher) => teacher.subject?.toLowerCase().includes(subject.toLowerCase())
-        );
+        filter.subject = { $regex: subject, $options: "i" };
     }
 
     if (stages.toLowerCase() !== "all") {
-        filterdTeachers = filterdTeachers.filter(
-            (teacher) => teacher.stagesTought?.toLowerCase().includes(stages.toLowerCase())
-        );
+        filter.stagesTaught = { $regex: stages, $options: "i" };
     }
 
     if (city.toLowerCase() !== "all") {
-        filterdTeachers = filterdTeachers.filter(
-            (teacher) => teacher.city?.toLowerCase().includes(city.toLowerCase())
-        );
+        filter.city = { $regex: city, $options: "i" };
     }
 
     if (query) {
-        filterdTeachers = filterdTeachers.filter((teacher) =>
-            teacher.name?.toLowerCase().includes(query.toLowerCase())
-        );
+        filter.name = { $regex: query, $options: "i" };
     }
 
-    const total = filterdTeachers.length;
-    const totalPages = Math.ceil(total / limit);
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    const paginatedData = filterdTeachers.slice(startIndex, endIndex);
+    try {
+        const total = await Teacher.countDocuments(filter);
+        const totalPages = Math.ceil(total / limit);
+        const teachers = await Teacher.find(filter)
+            .skip((page - 1) * limit)
+            .limit(limit);
 
-    const pageInfo = {
-        nextPage: endIndex < total ? { page: page + 1, limit } : null,
-        prevPage: startIndex > 0 ? { page: page - 1, limit } : null,
-    };
-
-    return NextResponse.json({
-        success: true,
-        message: "Schools Fetched Successfully",
-        count: paginatedData.length,
-        totalCount: total,
-        totalPages,
-        page,
-        next: pageInfo.nextPage,
-        prev: pageInfo.prevPage,
-        teachers: paginatedData,
-    });
+        return NextResponse.json({
+            success: true,
+            message: "Teachers Fetched Successfully",
+            count: teachers.length,
+            totalCount: total,
+            totalPages,
+            page,
+            next: (page * limit < total) ? { page: page + 1, limit } : null,
+            prev: (page > 1) ? { page: page - 1, limit } : null,
+            teachers,
+        });
+    } catch (error) {
+        return NextResponse.json({
+            success: false,
+            message: "Server Error",
+            error: error.message,
+        }, { status: 500 });
+    }
 }

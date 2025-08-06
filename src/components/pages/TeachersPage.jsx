@@ -20,7 +20,7 @@ async function getTeachers(filterData) {
     const {
         type = "",
         city = "",
-        stagesTought = "",
+        stagesTaught = "",
         subject = "",
         query = "",
         page = 1,
@@ -32,7 +32,7 @@ async function getTeachers(filterData) {
     if (type && type !== "all") params.set("type", type);
     if (city && city !== "all") params.set("city", city);
     if (subject && subject !== "all") params.set("subject", subject);
-    if (stagesTought && stagesTought !== "all") params.set("stagesTought", stagesTought) 
+    if (stagesTaught && stagesTaught !== "all") params.set("stagesTaught", stagesTaught) 
     if (query) params.set("query", query);
     if (page) params.set("page", page);
     if (limit) params.set("limit", limit);
@@ -48,7 +48,7 @@ export default function TeachersPage() {
         type: "",
         city: "",
         subject: "",
-        stagesTought: "",
+        stagesTaught: "",
         query: "",
         page: 1,
         limit: 9
@@ -103,7 +103,7 @@ export default function TeachersPage() {
                 <SearchBar headerText={"Showing teachers results in \"Egypt\" "} handleShowFilters={() => setShowFilters(!showFilters)} query={filterData.query} changeHandler={handleFiltersChange} placeholder={"Search for a teacher..."} />
                 <div className={`gridContainer ${data && data?.teachers.length === 0 && "noResults"}`}>
                     {isLoading && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />) || !data && Array(9).fill(0).map((_, index) => <TeacherCardSkeleton key={index + 1} />)}
-                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTought={teacher.stagesTought} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <NotFound text={"No teachers found"} query={filterData.query} /> || error && <p className="noResults">Something went wrong</p> }
+                    {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTaught={teacher.stagesTaught} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <NotFound text={"No teachers found"} query={filterData.query} /> || error && <p className="noResults">Something went wrong</p> }
                 </div>
 
                 <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />

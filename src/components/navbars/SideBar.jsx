@@ -111,11 +111,11 @@ export default function SideBar({ headerText, headerIcon, showFilters, handleSho
 
 
                         <div className="filterField">
-                            <label htmlFor="stagesTought">Grades</label>
-                            <select name="stagesTought" defaultValue="all" onChange={(e) => {
+                            <label htmlFor="stagesTaught">Grades</label>
+                            <select name="stagesTaught" defaultValue="all" onChange={(e) => {
                                 changeHandler(e);
                                 handleShowFilters();
-                            }} id="stagesTought">
+                            }} id="stagesTaught">
                                 <option value="all">All</option>
                                 {
                                     stages.map((stage, index) => (

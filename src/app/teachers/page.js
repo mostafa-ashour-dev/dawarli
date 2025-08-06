@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 
 export const metadata = {
-    title: "Tutors",
+    title: "Teachers",
     description: "Search for top-rated tutors in Egypt and connect with qualified teachers. dawarli makes it easier to choose the best education for your child.",
 }
 

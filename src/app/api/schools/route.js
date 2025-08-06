@@ -1,62 +1,70 @@
 import { NextResponse } from "next/server";
-import schoolData from "@/constants/schoolsEn.json";
+import connectToDB  from "@/lib/mongoose";
+import School from "@/models/schoolModel";
 
 export async function GET(request) {
-    const { searchParams } = new URL(request.url);
+    try {
+        await connectToDB();
 
-    const page = parseInt(searchParams.get("page") || "1", 10);
-    const limit = parseInt(searchParams.get("limit") || "10", 10);
-    const query = searchParams.get("query") || "";
-    const type = searchParams.get("type") || "all";
-    const city = searchParams.get("city") || "all";
-    const overview = searchParams.get("overview") || 5;
+        const { searchParams } = new URL(request.url);
 
-    let filteredSchools = [...schoolData];
-    if (type.toLowerCase() !== "all") {
-        filteredSchools = filteredSchools.filter(
-            (school) => school.educationType?.toLowerCase() === type.toLowerCase()
+        const page = parseInt(searchParams.get("page") || "1", 10);
+        const limit = parseInt(searchParams.get("limit") || "10", 10);
+        const query = searchParams.get("query") || "";
+        const type = searchParams.get("type") || "all";
+        const city = searchParams.get("city") || "all";
+        const overview = parseFloat(searchParams.get("overview") || "5");
+
+        const filter = {};
+
+        if (type.toLowerCase() !== "all") {
+            filter.educationType = { $regex: new RegExp(type, "i") };
+        }
+
+        if (city.toLowerCase() !== "all") {
+            filter["location.0.address"] = { $regex: new RegExp(city, "i") };
+        }
+
+        if (overview) {
+            filter.rating = { $gte: overview };
+        }
+
+        if (query) {
+            filter.title = { $regex: new RegExp(query, "i") };
+        }
+
+        const total = await School.countDocuments(filter);
+        const totalPages = Math.ceil(total / limit);
+        const schools = await School.find(filter)
+            .sort({ rating: -1 })
+            .skip((page - 1) * limit)
+            .limit(limit);
+
+        const pageInfo = {
+            nextPage: page * limit < total ? { page: page + 1, limit } : null,
+            prevPage: page > 1 ? { page: page - 1, limit } : null,
+        };
+
+        return NextResponse.json({
+            success: true,
+            message: "Schools Fetched Successfully",
+            count: schools.length,
+            totalCount: total,
+            totalPages,
+            page,
+            next: pageInfo.nextPage,
+            prev: pageInfo.prevPage,
+            schools,
+        });
+    } catch (error) {
+        console.error("Failed to fetch schools:", error);
+        return NextResponse.json(
+            {
+                success: false,
+                message: "Server Error",
+                error: error.message,
+            },
+            { status: 500 }
         );
     }
-
-    if (city.toLowerCase() !== "all") {
-        filteredSchools = filteredSchools.filter(
-            (school) => school.location?.[0]?.address?.toLowerCase().includes(city.toLowerCase())
-        );
-    }
-
-    if (overview) {
-        filteredSchools = filteredSchools.filter((school) => school.rating >= overview);
-    }
-
-    if (query) {
-        filteredSchools = filteredSchools.filter((school) =>
-            school.title?.toLowerCase().includes(query.toLowerCase())
-        );
-    }
-
-    filteredSchools.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-
-    const total = filteredSchools.length;
-    const totalPages = Math.ceil(total / limit);
-    const startIndex = (page - 1) * limit;
-    const endIndex = page * limit;
-    const paginatedData = filteredSchools.slice(startIndex, endIndex);
-
-    const pageInfo = {
-        nextPage: endIndex < total ? { page: page + 1, limit } : null,
-        prevPage: startIndex > 0 ? { page: page - 1, limit } : null,
-    };
-
-    return NextResponse.json({
-        success: true,
-        message: "Schools Fetched Successfully",
-        count: paginatedData.length,
-        totalCount: total,
-        totalPages,
-        page,
-        next: pageInfo.nextPage,
-        prev: pageInfo.prevPage,
-        schools: paginatedData,
-    });
 }
