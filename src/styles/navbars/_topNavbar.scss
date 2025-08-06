@@ -183,6 +183,10 @@
       }
     }
   }
+
+  @media screen and (max-width: 450px) {
+    padding: 1rem;
+  }
   @media screen and (max-width: 416px) {
     .navLeft {
       .logo {
@@ -197,4 +201,6 @@
       }
     }
   }
+
+  
 }

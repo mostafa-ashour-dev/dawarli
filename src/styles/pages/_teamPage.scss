@@ -24,7 +24,7 @@
       width: 100%;
       padding: 1rem;
       border-radius: $st-border-radius;
-      border: 1px solid #e0e0e0;
+      border: 1px solid var(--border-color);
       background-color: var(--surface-color);
 
 
@@ -56,6 +56,11 @@
                 font-size: 1rem;
 
                 &:hover {
+                    background: var(--body-bg);
+                    color: var(--primary-color);
+                }
+
+                @media (prefers-color-scheme: dark) {
                     background: var(--body-bg);
                     color: var(--primary-color);
                 }
@@ -116,5 +121,8 @@
       grid-template-columns: repeat(1, 1fr);
     }
   
+    p {
+      font-size: .8rem;
+    }
   }
 }
