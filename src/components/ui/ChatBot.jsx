@@ -264,9 +264,7 @@ export default function ChatBot({ enabled }) {
                 <button className={`chatBtn ${messages.map((message) => message.role).includes("user") ? "" : "active"}`} onClick={handleShow}>
                     <div className="robotImage"></div>
                 </button>
-                {messages.map((message) => message.role).includes("user") ? "" : (
-                    <p>Have a question?</p>
-                )}
+            
             </div>
 
 

@@ -1,6 +1,6 @@
 
 
-$st-transition: all 0.3s linear;
+$st-transition: all 0.3s cubic-bezier(.58,.2,.52,.87);
 
 $st-border-radius: 12px;
 $rounded-border-radius: 100px;
