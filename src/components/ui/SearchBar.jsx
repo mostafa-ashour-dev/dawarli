@@ -7,6 +7,7 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
     const [searchHistory, setSearchHistory] = useState([]);
     const formRef = useRef(null);
     const inputRef = useRef(null);
+
     const [showHistory, setShowHistory] = useState(false);
 
     useEffect(() => {
@@ -20,20 +21,18 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
 
     useEffect(() => {
         function handleClickOutside(e) {
-            if (
-                formRef.current &&
-                !formRef.current.contains(e.target)
-            ) {
+            const isClickInsideForm = formRef.current && formRef.current.contains(e.target);
+            const isClickOnRemoveBtn = e.target.closest("[data-remove]");
+
+            if (!isClickInsideForm && !isClickOnRemoveBtn) {
                 setShowHistory(false);
             }
         }
 
         document.addEventListener("click", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("click", handleClickOutside);
-        };
+        return () => document.removeEventListener("click", handleClickOutside);
     }, []);
+
 
     function handleAddSearchHistory(search) {
 
@@ -62,6 +61,12 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
 
     }
 
+    function removeSearchElement(index) {
+        const newHistory = [...searchHistory];
+        newHistory.splice(index, 1);
+        setSearchHistory(newHistory);
+        localStorage.setItem("searchHistory", JSON.stringify(newHistory));
+    }
 
 
     return (
@@ -81,9 +86,9 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
                     const value = e.target.query.value;
                     changeHandler(e, "search");
 
-                    if(value === "") return;
+                    if (value === "") return;
                     handleAddSearchHistory(value);
-                    
+
                 }}
             >
                 <FaSearch />
@@ -95,7 +100,7 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
                     autoCapitalize="sentences"
                     defaultValue={query || ""}
                     placeholder={placeholder || "Search for a school..."}
-                    onFocusCapture={() => setShowHistory(true)}
+                    onClick={() => setShowHistory(true)}
                     onChange={() => {
                         setShowHistory(false);
                     }}
@@ -122,9 +127,10 @@ export default function SearchBar({ headerText, placeholder, changeHandler, quer
                     <div className="searchHistoryContainer">
                         {searchHistory.length > 0 ? (
                             searchHistory.map((search, index) => (
-                                <button key={index} type="button" onClick={(e) => handleHistoryClick(e, search)}>
-                                    {search}
-                                </button>
+                                <div key={index} className="searchHistoryItem">
+                                    <span onClick={(e) => handleHistoryClick(e, search)} >{search}</span>
+                                    <button type="button" onClick={(e) => { e.stopPropagation(); removeSearchElement(index); }} className="removeSearch" data-remove><FaTimes className="removeSearch"/></button>
+                                </div>
                             ))
                         ) : (
                             <p>No search history</p>

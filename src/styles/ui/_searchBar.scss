@@ -114,6 +114,20 @@
           color: $muted-text;
         }
 
+        .searchHistoryItem {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+
+          span {
+            font-size: .8rem;
+            color: $muted-text;
+            cursor: pointer;
+          }
+        }
+
         button {
           background: none;
           border: none;
