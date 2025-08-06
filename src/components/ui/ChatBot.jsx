@@ -233,7 +233,7 @@ export default function ChatBot({ enabled }) {
 
                 <header className="chatHeader">
                     <div className="chatBotImage">
-                        <img src="/imgs/robot.png" alt="robot" />
+                        <div className="robotImage"></div>
                     </div>
                     <div>
                         <h3>Cora Assistant</h3>
@@ -262,7 +262,7 @@ export default function ChatBot({ enabled }) {
 
             <div className="chatBtnContainer">
                 <button className={`chatBtn ${messages.map((message) => message.role).includes("user") ? "" : "active"}`} onClick={handleShow}>
-                    <img src={"/imgs/robot.png"} />
+                    <div className="robotImage"></div>
                 </button>
                 {messages.map((message) => message.role).includes("user") ? "" : (
                     <p>Have a question?</p>

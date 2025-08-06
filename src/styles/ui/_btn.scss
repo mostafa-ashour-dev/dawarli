@@ -8,8 +8,8 @@
   text-decoration: none;
   font-family: $montserrat;
   font-weight: 700;
-  background: $body-bg;
-  color: $primary-text;
+  background: var(--body-bg);
+  color: var(--primary-text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,17 +24,26 @@
   }
 
   &.active {
-    background-color: $primary-color;
-    color: $secondary-text;
+    background-color: var(--primary-color);
+    color: var(--secondary-text);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--body-bg);
+    }
   }
 
   &:hover {
-    background-color: $primary-color;
-    color: $secondary-text;
+    background-color: var(--primary-color);
+    color: var(--secondary-text);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--body-bg) !important;
+    }
+  
 
     &.active {
-      background-color: $body-bg;
-      color: $primary-color;
+      background-color: var(--body-bg);
+      color: var(--primary-color) !important;
     }
   }
 

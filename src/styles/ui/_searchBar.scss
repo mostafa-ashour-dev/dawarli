@@ -20,12 +20,13 @@
       align-items: center;
       width: 40px;
       height: 40px;
-      border: 1px solid $border-color;
+      border: 1px solid var(--border-color);
       border-radius: 50%;
-      background-color: $surface-color;
+      background-color: var(--surface-color);
       font-size: 1rem;
       display: none;
       cursor: pointer;
+      color: var(--primary-text);
     }
   }
 
@@ -39,8 +40,8 @@
     justify-content: space-between;
     gap: 0.5rem;
     padding: 0 0 0 1.5rem;
-    background: $surface-color;
-    border: 1px solid #e0e0e0;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
     border-radius: $rounded-border-radius;
     min-width: 30%;
     position: relative;
@@ -51,7 +52,7 @@
       border: none;
       padding-right: 1rem;
       font-size: .9rem;
-      color: $muted-text;
+      color: var(--muted-text);
       cursor: pointer;
     }
 
@@ -61,8 +62,8 @@
       top: calc(100% + 0.5rem);
       left: 0;
       width: 100%;
-      background: $surface-color;
-      border: 1px solid #e0e0e0;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
       border-radius: $st-border-radius;
       padding: 0.5rem 1rem;
       display: none;
@@ -89,6 +90,7 @@
           border: none;
           cursor: pointer;
           font-family: $montserrat;
+          color: var(--muted-text);
         }
       }
 
@@ -111,7 +113,7 @@
 
         p {
           font-size: 0.8rem;
-          color: $muted-text;
+          color: var(--muted-text);
         }
 
         .searchHistoryItem {
@@ -123,7 +125,7 @@
 
           span {
             font-size: .8rem;
-            color: $muted-text;
+            color: var(--muted-text);
             cursor: pointer;
           }
         }
@@ -134,13 +136,13 @@
           cursor: pointer;
           font-family: $montserrat;
           font-size: .8rem;
-          color: $muted-text;
+          color: var(--muted-text);
         }
       }
     }
 
     svg {
-      color: $muted-text;
+      color: var(--muted-text);
     }
     input {
       background: none;
@@ -148,12 +150,12 @@
       padding: 1rem;
       font-family: $montserrat;
       font-size: 0.9rem;
-      color: $primary-text;
+      color: var(--primary-text);
       outline: none;
       width: 100%;
 
       &::placeholder {
-        color: $muted-text;
+        color: var(--muted-text);
       }
     }
   }

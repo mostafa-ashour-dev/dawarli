@@ -109,7 +109,7 @@ export default function TeachersPage() {
                     {data && data.teachers.length > 0 ? data.teachers.map((teacher, index) => <TeacherCard key={index} name={teacher.name} subject={teacher.subject} description={teacher.description} city={teacher.city} gender={teacher.gender} phoneNumber={teacher.phone} educationType={teacher.educationType} stagesTaught={teacher.stagesTaught} avatar={teacher.avatar} />) : data && data.teachers.length === 0 && <NotFound text={"No teachers found"} query={filterData.query} /> || error && <p className="noResults">Something went wrong</p> }
                 </div>
 
-                <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
+                <PaginationBar isLoading={isLoading} page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
             </section>
         </main>
     )

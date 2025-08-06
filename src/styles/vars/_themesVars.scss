@@ -1,0 +1,42 @@
+
+$light-theme: (
+  primary-color: #030303,
+  body-bg: #f2f2f2,
+  surface-color: #fff,
+  border-color: #e0e0e0,
+  primary-text: #111111,
+  secondary-text: #fff,
+  tint-color: rgba(255, 255, 255, 0.5),
+  muted-text: #808080,
+  gold: #ffee00,
+  green: #2ae97d
+);
+
+$dark-theme: (
+  primary-color: #ffffff,
+  body-bg: #0a0a0a,
+  surface-color: #0f0f0f,
+  border-color: #333,
+  primary-text: #ffffff,
+  tint-color: rgba(0, 0, 0, 0.5),
+  secondary-text: #e2e2e2,
+  muted-text: #999999,
+  gold: #ffee00,
+  green: #2ae97d
+);
+
+@mixin css-vars($theme) {
+  @each $key, $value in $theme {
+    --#{$key}: #{$value};
+  }
+}
+
+:root {
+  @include css-vars($light-theme);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include css-vars($dark-theme);
+  }
+}

@@ -117,7 +117,7 @@ export default function SchoolsPage() {
                     }} title={school.title} key={index + 1} educationType={school.educationType} city={school.location && school.location[0].address} rating={school.rating} image={school.image} />)) : data && data?.schools.length === 0 && <NotFound query={filterData.query} notFoundString={"No schools found"} /> || error && <p className="noResults">Something went wrong</p>}
                 </div>
 
-                <PaginationBar page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
+                <PaginationBar isLoading={isLoading} page={filterData.page} nextPage={data?.next?.page} totalPages={data?.totalPages} previousPage={data?.previous?.page} changeHandler={handleFiltersChange} />
             </section>
 
             <SchoolDetails show={showDetals} handleShowDetails={handleShowDetails} title={data?.schools[currentIndex]?.title} image={data?.schools[currentIndex]?.image} location={data?.schools[currentIndex]?.location} educationType={data?.schools[currentIndex]?.educationType} rating={data?.schools[currentIndex]?.rating} />

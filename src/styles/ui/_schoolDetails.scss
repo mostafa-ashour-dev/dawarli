@@ -28,18 +28,18 @@
     background: none;
     font-size: 2rem;
     cursor: pointer;
-    color: $secondary-text;
+    color: var(--secondary-text);
   }
 
   .schoolDetailsContainer {
     width: 80%;
     height: 90%;
-    background: $surface-color;
+    background: var(--surface-color);
     border-radius: $st-border-radius;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     overflow-y: auto;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border-color);
     display: flex;
     justify-content: start;
     align-items: start;
@@ -52,7 +52,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.2);
+      background: var(--tint-color);
     }
 
     .schoolDetailsContent {
@@ -69,8 +69,8 @@
         max-height: 220px;
         border-radius: $st-border-radius;
         overflow: hidden;
-        background-color: $surface-color;
-        border: 1px solid #e0e0e0;
+        background-color: var(--surface-color);
+        border: 1px solid var(--border-color);
 
         img {
           width: 100%;
@@ -95,7 +95,7 @@
 
         p {
           font-size: 0.9rem;
-          color: $muted-text;
+          color: var(--muted-text);
         }
 
         .buttons {
@@ -137,7 +137,7 @@
 
       p {
         font-size: 1rem;
-        color: $muted-text;
+        color: var(--muted-text);
       }
     }
 
@@ -159,7 +159,7 @@
         gap: 0.5rem;
 
         &:not(:last-child) {
-          border-bottom: 1px solid #e0e0e0;
+          border-bottom: 1px solid var(--border-color);
           padding-bottom: 1rem;
           margin-top: 2rem;
         }
@@ -174,12 +174,12 @@
 
         > p {
           font-size: 0.8rem;
-          color: $muted-text;
+          color: var(--muted-text);
         }
 
         > span {
           font-size: 0.6rem;
-          color: $muted-text;
+          color: var(--muted-text);
           text-align: end;
           width: 100%;
           font-weight: 700;
@@ -197,8 +197,8 @@
             height: 35px;
             border-radius: 50%;
             overflow: hidden;
-            background-color: $surface-color;
-            border: 1px solid #e0e0e0;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
           }
 
           .reviewCreatorInfo {
@@ -214,7 +214,7 @@
 
             p {
               font-size: 0.6rem;
-              color: $muted-text;
+              color: var(--muted-text);
             }
           }
         }
@@ -279,7 +279,7 @@
 
   @media screen and (max-width: 650px) {
     .backBtn {
-      color: $primary-color;
+      color: var(--primary-color);
     }
 
     .schoolDetailsContainer {
@@ -317,7 +317,7 @@
   }
   @media screen and (max-width: 450px) {
     .backBtn {
-      color: $primary-color;
+      color: var(--primary-color);
     }
 
     .schoolDetailsContainer {

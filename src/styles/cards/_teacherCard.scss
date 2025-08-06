@@ -5,11 +5,11 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  background: $surface-color;
+  background: var(--surface-color);
   padding: 1rem;
   padding-top: 0 !important;
   border-radius: $st-border-radius;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-color);
   position: relative;
   overflow: visible;
   cursor: pointer;
@@ -29,13 +29,13 @@
     width: 100%;
     position: absolute;
     height: auto;
-    background: $surface-color;
+    background: var(--surface-color);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0.5rem .7rem;
     border-radius: $st-border-radius;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border-color);
     z-index: 100;
     // box-shadow: $st-shadow;
     display: none;
@@ -69,7 +69,7 @@
 
       p {
         font-size: 0.8rem;
-        color: $muted-text;
+        color: var(--muted-text);
         display: flex;
         justify-content: start;
         align-items: center;
@@ -84,7 +84,7 @@
       }
 
       svg {
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 1.2rem;
         margin-right: 0.3rem;
       }
@@ -92,7 +92,7 @@
 
     p {
       font-size: 0.7rem;
-      color: $muted-text;
+      color: var(--muted-text);
       font-family: $poppins;
       max-lines: 2;
       overflow: hidden;
@@ -110,8 +110,8 @@
     max-height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: $surface-color;
-    border: 1px solid #e0e0e0;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
     margin-right: .5rem;
 
     img {

@@ -22,13 +22,13 @@
 
       p {
         font-size: .9rem;
-        color: $muted-text;
+        color: var(--muted-text);
       }
     }
 
     .aboutImage {
       width: 35%;
-      background: $surface-color;
+      background: var(--surface-color);
       border-radius: $st-border-radius;
       border: 1px solid #e0e0e0;
       overflow: hidden;
@@ -47,7 +47,7 @@
 
       h2 {
         font-size: 2rem;
-        color: $primary-text;
+        color: var(--primary-text);
         font-weight: 600;
       }
     }

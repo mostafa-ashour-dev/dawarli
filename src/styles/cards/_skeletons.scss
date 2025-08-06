@@ -24,14 +24,14 @@
     min-height: 160px;
     border-radius: $st-border-radius;
     overflow: hidden;
-    background-color: $border-color;
+    background-color: var(--border-color);
   }
 
   .schoolCardSkeletonTitle {
     width: 100%;
     height: 20px;
     margin-top: 0.5rem;
-    background-color: $border-color;
+    background-color: var(--border-color);
     border-radius: calc($st-border-radius - 0.2rem);
     @extend #animation;
 
@@ -43,7 +43,7 @@
     width: 50%;
     height: 15px;
     margin-top: 0.5rem;
-    background-color: $border-color;
+    background-color: var(--border-color);
     border-radius: calc($st-border-radius - 0.2rem);
     @extend #animation;
   }
@@ -58,7 +58,7 @@
     .schoolCardSkeletonRating {
       width: 30%;
       height: 15px;
-      background-color: $border-color;
+      background-color: var(--border-color);
       border-radius: calc($st-border-radius - 0.2rem);
       @extend #animation;
     }
@@ -66,7 +66,7 @@
     .schoolCardSkeletonCity {
       width: 40%;
       height: 15px;
-      background-color: $border-color;
+      background-color: var(--border-color);
       border-radius: calc($st-border-radius - 0.2rem);
       @extend #animation;
     }
@@ -79,5 +79,5 @@
   height: 140px;
   width: 100%;
   border-radius: $st-border-radius;
-  background-color: $border-color;
+  background-color: var(--border-color);
 }

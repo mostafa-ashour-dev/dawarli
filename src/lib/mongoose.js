@@ -10,10 +10,7 @@ const connectDB = async () => {
     return mongoose
         .connect(MONGODB_URI)
         .then(() => {
-            console.log({
-                message: "Database Connected Successfully",
-                label: "success",
-            });
+            console.log({ message: "Database connected", label: "success" });
         })
         .catch((err) => {
             console.log({ message: err.message, label: "error" });

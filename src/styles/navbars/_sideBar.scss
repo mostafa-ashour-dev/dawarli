@@ -14,7 +14,7 @@
     background: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: $primary-color;
+    color: var(--primary-color);
     display: none;
   }
 
@@ -23,12 +23,12 @@
     align-items: center;
     justify-content: start;
     gap: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
     margin-bottom: 2rem;
 
     svg {
-      color: $muted-text;
+      color: var(--muted-text);
     }
 
     h2 {
@@ -58,7 +58,7 @@
         align-items: center;
         gap: 1.5rem;
         width: 100%;
-        
+
         input {
           text-align: center;
         }
@@ -68,7 +68,7 @@
           border: none;
           cursor: pointer;
 
-          color: $muted-text;
+          color: var(--muted-text);
           font-size: 1.2rem;
         }
       }
@@ -80,40 +80,53 @@
 
       input {
         width: 100%;
-        padding: .7rem 1rem;
+        padding: 0.7rem 1rem;
         font-family: $montserrat;
         background: none;
-        border: 1px solid #e0e0e0;
+        border: 1px solid var(--border-color);
         border-radius: $st-border-radius;
         outline: none;
+        color: var(--primary-text);
+        background-color: var(--surface-color);
 
         &::placeholder {
-          color: $muted-text;
+          color: var(--muted-text);
         }
       }
 
       select {
         width: 100%;
-        padding: .7rem 1rem;
+        padding: 0.7rem 1rem;
         font-family: $montserrat;
         background: none;
-        border: 1px solid #e0e0e0;
+        border: 1px solid var(--border-color);
         border-radius: $st-border-radius;
+        color: var(--primary-text);
         outline: none;
+        background-color: var(--surface-color);
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: var(--tint-color);
+        }
+        option {
+          color: var(--primary-text);
+        }
       }
     }
   }
 
   @media screen and (max-width: 810px) {
     padding: 3rem 2rem;
-
   }
 
   @media screen and (max-width: 750px) {
     position: fixed;
-    background: $surface-color;
+    background: var(--surface-color);
     padding-right: 2rem;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid var(--border-color);
     width: 55%;
     display: none;
 
@@ -124,11 +137,9 @@
     .closeBtn {
       display: block;
     }
-    
   }
 
   @media screen and (max-width: 480px) {
     width: 100%;
   }
-
 }

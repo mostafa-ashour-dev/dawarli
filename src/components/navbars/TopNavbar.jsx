@@ -71,7 +71,7 @@ export default function TopNavbar() {
                     <FaBars />
                 </button>
                 <Link className="logo" href="/">
-                    <img src="/imgs/dawarli.png" alt="logo" /> <div><h1>Dawarli</h1><p>Your compass to schools & tutors.</p></div> 
+                    <div className="logoImage"></div> <div><h1>Dawarli</h1><p>Your compass to schools & tutors.</p></div> 
                 </Link>
 
                 <ul>
