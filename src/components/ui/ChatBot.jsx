@@ -48,7 +48,7 @@ export default function ChatBot({ enabled }) {
                 const result = await chat.sendMessage(message.trim());
 
                 const botMessage = {
-                    role: "bot",
+                    role: "model",
                     content: result.response.text(),
                     createdAt: new Date(),
                 };
@@ -87,6 +87,7 @@ export default function ChatBot({ enabled }) {
                 parts: [{ text: msg.content }],
             })),
         ];
+
 
         const generationConfig = {
             temperature: 1,
@@ -137,7 +138,7 @@ export default function ChatBot({ enabled }) {
 
     function handleResetChat() {
         const newInitialMessage = {
-            role: "bot",
+            role: "model",
             content: "Hello! How can I help you?",
             createdAt: new Date(),
         };
