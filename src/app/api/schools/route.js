@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectToDB  from "@/lib/mongoose";
+import connectToDB from "@/lib/mongoose";
 import School from "@/models/schoolModel";
 
 export async function GET(request) {
@@ -17,16 +17,17 @@ export async function GET(request) {
 
         const filter = {};
 
-        if (type.toLowerCase() !== "all") {
-            filter.educationType = { $regex: new RegExp(type, "i") };
-        }
-
         if (city.toLowerCase() !== "all") {
-            filter["location.0.address"] = { $regex: new RegExp(city, "i") };
+            filter.location = { $elemMatch: { address: { $regex: city, $options: "i" } } };
         }
 
-        if (overview) {
-            filter.rating = { $gte: overview };
+        if (type.toLowerCase() !== "all") {
+            filter.educationType = {  $in: [type] };
+        }
+
+
+        if (overview && overview >= 3 && overview <= 5) {
+            filter.rating = { $lte: overview };
         }
 
         if (query) {
@@ -39,7 +40,6 @@ export async function GET(request) {
             .sort({ rating: -1 })
             .skip((page - 1) * limit)
             .limit(limit);
-
         const pageInfo = {
             nextPage: page * limit < total ? { page: page + 1, limit } : null,
             prevPage: page > 1 ? { page: page - 1, limit } : null,

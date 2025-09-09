@@ -9,18 +9,14 @@ import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 export default function SideBar({ headerText, headerIcon, showFilters, handleShowFilters, page, changeHandler, overview }) {
 
 
-    const [show, setShow] = useState(false);
-
     function handleClickChange(type) {
         if (type === "plus" && overview < 5) {
             changeHandler({ target: { name: "overview", value: overview + 0.5 } });
-        } else if (type === "minus" && overview > 0) {
+        } else if (type === "minus" && overview > 3) {
             changeHandler({ target: { name: "overview", value: overview - 0.5 } });
         }
 
     }
-
-
     return (
         <aside className={`sidebar ${showFilters ? "active" : ""}`}>
 
@@ -68,9 +64,12 @@ export default function SideBar({ headerText, headerIcon, showFilters, handleSho
                             <label htmlFor="overview">Rating</label>
                             <div className="overviewField">
                                 <button className="minusBtn" onClick={() => handleClickChange("minus")}><FaMinus /></button>
-                                <input type="text" min={0} max={5} maxLength={1} value={overview} onChange={(e) => {
-                                    changeHandler(e);
+                                <input type="text" min={0} max={5} maxLength={3} onFocus={(e) => e.target.select()} value={overview} onChange={(e) => {
                                     handleShowFilters();
+                                    const value = e.target.value;
+                                    if (!isNaN(value) && value >= 3 && value <= 5) {
+                                        changeHandler({ target: { name: "overview", value } });
+                                    }
                                 }} />
                                 <button className="plusBtn" onClick={() => handleClickChange("plus")}><FaPlus /></button>
                             </div>

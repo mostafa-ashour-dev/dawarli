@@ -19,7 +19,7 @@ async function getSchools(filterData) {
     const {
         city = "",
         type = "",
-        overview = "",
+        overview = 3,
         query = "",
         page = 1,
         limit = 10
@@ -43,9 +43,9 @@ async function getSchools(filterData) {
 export default function SchoolsPage() {
 
     const [filterData, setFilterData] = useState({
-        city: "",
-        type: "",
-        overview: 0,
+        city: "all",
+        type: "all",
+        overview: 5,
         query: "",
         page: 1,
         limit: 9

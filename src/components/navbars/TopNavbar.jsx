@@ -16,10 +16,10 @@ const navLinks = [
         link: "/about",
         text: "About"
     },
-    {
-        link: "/team",
-        text: "Team"
-    }
+    // {
+    //     link: "/team",
+    //     text: "Team"
+    // }
 ]
 
 export default function TopNavbar() {
